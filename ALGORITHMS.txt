@@ -1,0 +1,5 @@
+**C++ ALGORITHMS SOURCE LIST**
+Compiler/IDE: MinGW GCC/Codelite
+
+01- Numeric Item
+02- Numeric Tree
