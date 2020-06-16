@@ -1,0 +1,7 @@
+**C++ ALGORITHMS SOURCE LIST**
+Compiler/IDE: MinGW GCC/Codelite
+
+01- Numeric Item
+02- Numeric Tree
+03- Numeric List
+04- Recursion (Sum, Factorial, Tail/Head/Taylor Recursion, Fibonacci, Binary Search, Towers of Hanoi)

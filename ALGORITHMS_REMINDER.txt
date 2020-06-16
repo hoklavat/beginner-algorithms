@@ -1,0 +1,21 @@
+****ALGORITHMS****
+
+[RECURSION]
+* function call inside same function.
+* can be transformed into iteration. vice versa.
+* each recursive call has its own stack frame isolated from each other.
+* tail recursion: call function at the end. no stack overflow.
+* head recursion: call function at the beginning. push previous states to stack then pop them from stack. stack overflow risk.
+* taylor recursion: store previous states in accumulator then pass to next call. memory efficient.
+* sum, factorial, fibonacci, binary search, towers of hanoi, ...
+
+[LINEAR SEARCH]
+* unsorted array. one by one. O(N) running time. N array elements.
+
+[BINARY SEARCH]
+* sorted array. O(logN) running time. tail recursion. N array elements.
+* divide array in half. if smaller than middle take left-hand otherwise right-hand then repeat.
+
+[TOWERS OF HANOI]
+* O(2^N) running time. N number of disks.
+* three rods. many disks. one disk at a time. uppermost disk can move. smaller on larger.
