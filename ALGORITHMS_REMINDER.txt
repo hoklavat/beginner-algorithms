@@ -19,3 +19,33 @@
 [TOWERS OF HANOI]
 * O(2^N) running time. N number of disks.
 * three rods. many disks. one disk at a time. uppermost disk can move. smaller on larger.
+
+[BACKTRACKING]
+* constraint satisfaction problems. combinatorial optimization problems. depth-first search.
+* incrementally build possible canditates to solution. abandon invalid canditates and backtrack. solution tree.
+* faster than brute-force which tests all possible solutions.
+* exponential running time. too slow.
+* n-queen's, vertex coloring, sudoku, knight's tour, np-complete, np-hard ...
+* meta-heuristics: approximate solutions to np problems. ant-colony optimization, genetic algorithms, simulated annealing
+
+[N-QUEEN's PROBLEM]
+* placing N queens on an NxN chess board such that no queen threatens any other.
+
+[VERTEX COLORING PROBLEM]
+* np-complete problem.
+* coloring vertices of a graph such that no two adjacent vertices share same color.
+* chromatic number: smallest number of colors needed.
+* there may be more than one solution.
+* bipartite graph, making schedule, radio frequency assignment, register allocation, map coloring ...
+* four-color theorem.
+* power-welsh algorithm.
+
+[KNIGHT's TOUR PROBLEM]
+* knight visits every square on a chessboard exactly once. hamiltonian-path problem.
+* closed knight's tour: knight's ending point is same as the starting point. hamiltonian-cycle problem.
+* Schwenk Theorem: for an mxn chessboard the closed knight tour problem is always feasible, unless:
+  - m and n are both odds
+  - m = 1, 2 or 4
+  - m = 3 and n = 4, 6 or 8
+
+
