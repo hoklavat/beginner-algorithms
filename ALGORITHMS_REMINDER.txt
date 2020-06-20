@@ -48,4 +48,27 @@
   - m = 1, 2 or 4
   - m = 3 and n = 4, 6 or 8
 
+[DYNAMIC PROGRAMMING]
+* dynamic programming: dividing complex problems into simpler sub-programs. overlapping sub-problems. O(N) linear time complexity.
+* memoization: store previous calculations and fetch them if needed later. don't recalculate. O(1) time complexity.
+* divide and conquer: combining optimal solutions to non-overlapping sub-problems. merge/quick sort.
 
+[FIBONACCI NUMBERS]
+F(N) = F(N-1) + F(N-2)
+F(0) = 0, F(1) = 1
+
+[KNAPSACK PROBLEM]
+* combinatorial optimization. resource allocation.
+* set of N items, each has mass w and value v. total mass in knapsack shouldn't exceed W. make total value V large as possible.
+* divisible knapsack problem: if there are fractions of items then greedy approach.
+  - sort items according to their values. O(N*logN) time complexity.
+  - start with most valuable item and take as much as possible. then try with next item. O(N) time complexity.
+  - overall complexity: O(N*logN) + O(N) = O(N*logN)
+* 0-1 knapsack problem: no fractions.
+* S[i][w]: maximum cost of items that fit inside a knapsack of size weight w, choosing from the first i items.
+* S[i][w] = Math.max(S[i-1][w]; vi + S[i-1][w-wi])
+  - weights columns: 0-W
+  - items rows: 0-N
+  - knapsack with weight capacity x, number of items y, each item has a value, obtain maximum possible value without exceeding x.
+  - value in last row-column
+* O(n*W) running time. pseudo-polynomial. running time; polynomial in numeric value, exponential in the length of the input.
