@@ -8,3 +8,5 @@ Compiler/IDE: MinGW GCC/Codelite
 05- Backtracking (N-Queen's Problem)
 06- Backtracking (Vertex Coloring Problem)
 07- Backtracking (Knight's Tour Problem)
+08- Dynamic Programming (Fibonacci)
+09- Dynamic Programming (Knapsack Problem)
