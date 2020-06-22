@@ -10,3 +10,5 @@ Compiler/IDE: MinGW GCC/Codelite
 07- Backtracking (Knight's Tour Problem)
 08- Dynamic Programming (Fibonacci)
 09- Dynamic Programming (Knapsack Problem)
+10- Data Structures (Array)
+11- Data Structures (Linked List)

@@ -63,7 +63,7 @@ F(0) = 0, F(1) = 1
 * divisible knapsack problem: if there are fractions of items then greedy approach.
   - sort items according to their values. O(N*logN) time complexity.
   - start with most valuable item and take as much as possible. then try with next item. O(N) time complexity.
-  - overall complexity: O(N*logN) + O(N) = O(N*logN)
+  - overall time complexity: O(N*logN) + O(N) = O(N*logN)
 * 0-1 knapsack problem: no fractions.
 * S[i][w]: maximum cost of items that fit inside a knapsack of size weight w, choosing from the first i items.
 * S[i][w] = Math.max(S[i-1][w]; vi + S[i-1][w-wi])
@@ -72,3 +72,32 @@ F(0) = 0, F(1) = 1
   - knapsack with weight capacity x, number of items y, each item has a value, obtain maximum possible value without exceeding x.
   - value in last row-column
 * O(n*W) running time. pseudo-polynomial. running time; polynomial in numeric value, exponential in the length of the input.
+
+[ARRAY]
+* index-value. 
+* first index 0.
+* random access.
+* two-dimensional, matrix, [row][column].
+* non-resizable, non-dynamic.
+* dynamic array: resizable.
+* O(1) constant running time; get single item, add to last, remove from last.
+* O(N) linear running time; reconstruction, insertion by pos, remove by pos.
+* insert/remove by pos takes much time because of shifting.
+* operations: add, insert, remove
+
+[LINKED LIST]
+* node: data + next-node-reference.
+* next-node-reference at last node points to NULL.
+* no random access. sequential access.
+* dynamic. runtime memory allocation.
+* efficient for first elements.
+* elements with different sizes.
+* stack, queue implementation.
+* high memory due to references.
+* diffucult to navigate backwards.
+* O(1) running time; insert at start, remove from start. 
+* O(N) running time; insert at last, remove by pos.
+* operations: insertAtStart, insertAtEnd, removeStart, remove
+
+
+
