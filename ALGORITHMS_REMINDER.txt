@@ -99,5 +99,13 @@ F(0) = 0, F(1) = 1
 * O(N) running time; insert at last, remove by pos.
 * operations: insertAtStart, insertAtEnd, removeStart, remove
 
-
+[STACK]
+* abstract. interface.
+* last-in first-out.
+* operations: pop, push, peek
+* graph algorithms: depth-first search/euler-cycles/strongly connected components, binary search tree traversal, linked list search, ...
+* call stack: special memory region. os-managed. limited-size. not resizable. return points and temporary variables for subroutines. faster.
+* heap: special memory region. user-managed. unlimited-size. resizable. deallocation required otherwise memory leak. pointers. objects. slower.
+* recursive algorithms can be transformed into simple method with stacks. too many function calls results in stack overflow.
+* O(1) running time; push, pop
 
