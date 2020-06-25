@@ -14,3 +14,5 @@ Compiler/IDE: MinGW GCC/Codelite
 11- Data Structures (Linked List)
 12- Data Structures (Stack - Array)
 13- Data Structures (Stack - Linked List)
+14- Data Structures (Queue - Linked List)
+15- Data Structures (Binary Search Tree)

@@ -97,15 +97,57 @@ F(0) = 0, F(1) = 1
 * diffucult to navigate backwards.
 * O(1) running time; insert at start, remove from start. 
 * O(N) running time; insert at last, remove by pos.
-* operations: insertAtStart, insertAtEnd, removeStart, remove
+* operations: insertAtStart, insertAtEnd, removeStart, remove.
 
 [STACK]
 * abstract. interface.
 * last-in first-out.
-* operations: pop, push, peek
+* operations: pop, push, peek.
 * graph algorithms: depth-first search/euler-cycles/strongly connected components, binary search tree traversal, linked list search, ...
 * call stack: special memory region. os-managed. limited-size. not resizable. return points and temporary variables for subroutines. faster.
 * heap: special memory region. user-managed. unlimited-size. resizable. deallocation required otherwise memory leak. pointers. objects. slower.
 * recursive algorithms can be transformed into simple method with stacks. too many function calls results in stack overflow.
-* O(1) running time; push, pop
+* O(1) running time; push, pop.
 
+[QUEUE]
+* abstract. interface.
+* first-in first-out.
+* operations: enqueue, dequeue, peek.
+* graph algorithms: breadth first search graph reversal, threading, asynchronous data transfer,  stochastic models.
+* head:first-node, tail:last-node.
+
+[BINARY SEARCH TREE]
+* array: binary search fast O(logN), insert/remove slow O(N).
+* linked list: binary search slow O(N), insert/remove fast O(1).
+* binary search tree: binary search/insert/remove fast O(logN). (balanced tree)
+* tree: root node + nodes + edges (connection between nodes)
+* sorted keys.
+* single path from root to any other node.
+* root node - parent node - child node
+   - maximum two children nodes per node.
+   - left child is smaller than parent. 
+   - right child is greater than parent.
+   - leftmost node is smallest.
+   - rightmost node is largest.
+* leaf node has no children.
+* balanced tree: left children = right children approximately.
+* predecessor: largest in left subtree.
+* successor: smallest in right subtree.
+* height of tree: 
+   - number of layers. 
+   - h layer has 2^(h-1) nodes.
+   - minimum height: h = logn
+   - if tree is balanced, running time is logarithmic.
+   - if tree is unbalanced running time is linear.
+* insert: greater than root right, smaller than root left. O(logN) - O(N)
+* search: greater than root right, smaller than root left. O(logN) - O(N)
+* delete: O(logN) - O(N)
+   - leaf node: simply remove.
+   - single child node: update references.
+   - two children node: predecessor/successor/root node swapping.
+* soft delete: node not removed actually, rather marked as removed. not efficient. O(logN) + O(1)
+* traversal: 
+   - in-order: left subtree + root node + right subtree
+   - pre-order: root node + left subtree + right subtree
+   - post-order: left subtree + right subtree + root node
+* applications: hierarchical data. os file system, chess, tic-tac-toe, machine learning
