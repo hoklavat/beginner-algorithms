@@ -147,7 +147,65 @@ F(0) = 0, F(1) = 1
    - two children node: predecessor/successor/root node swapping.
 * soft delete: node not removed actually, rather marked as removed. not efficient. O(logN) + O(1)
 * traversal: 
-   - in-order: left subtree + root node + right subtree
-   - pre-order: root node + left subtree + right subtree
-   - post-order: left subtree + right subtree + root node
-* applications: hierarchical data. os file system, chess, tic-tac-toe, machine learning
+   - in-order: left subtree + root node + right subtree.
+   - pre-order: root node + left subtree + right subtree.
+   - post-order: left subtree + right subtree + root node.
+* applications: hierarchical data. os file system, chess, tic-tac-toe, machine learning.
+
+[PRIORITY QUEUE]
+* abstract. priority.
+* item with highest priority served first.
+* implemented with heap, self-balancing tree.
+* operations: insertWithPriority, getHighestPriority, peek
+* sorting: sequence of decreasing priorities. tree-sort, heap-sort.
+
+[HEAP]
+* binary tree. priority queue. naturally balanced. dijkstra and prims algorithms.
+* max heap: keys of parent nodes are greater. root maximum.
+* min heap: keys of parent nodes are smaller. root minimum.
+* parent node i: left node 2i+1: right node 2i+2
+    0
+ 1     2
+3 4   5 6
+   ...
+* construction O(N), reconstruction O(N) + O(logN), delete O(1) + O(logN)
+* delete: last item to removed item.
+* binomial heap: merging two heaps.
+* fibonacci heap:  dijkstra's shortest path, prim's spanning tree, ...
+
+[HEAP SORT]
+* comparision based.
+* worst-case O(NlogN). slower than quicksort. insert O(1). merge O(logN).
+* additional memory not needed. in-place algorithm. insert O(1). merge O(1).
+* swap root + maintain heap.
+* memory complexity O(N), find min/max O(1), insert O(1) + O(log2(N)), remove O(1) + O(logN)
+
+[ASSOCIATIVE ARRAY]
+* abstract. key-value. unique keys. 
+* implementation with binary search tree, hastable.
+* operations: add, remove, update, search value by key.
+* applications: database, word occurence count, storing data, lookup tables, rabin-karp algorithm, ...
+
+[HASH TABLE/DICTIONARY]
+* hash function
+   - distribution of keys uniformly into buckets.
+   - key space -> buckets (array slots).
+   - certain key to any type -> random array index.
+   - n: number of keys
+   - m: number of buckets (size of array should be prime for uniform distribution for indexes)
+   - h(x): k -> m (key to array index)
+   - h(x) = n % m (integers)
+   - h(x): add up and modulo ascii values for characters. (strings)
+   - LF = n/m : load factor (empty ht: 0: memory waste, full ht: 1: slower)
+* collision: different keys to same bucket.
+   - chaining: store keys in same bucket, connect with linked list.
+   - open addressing: generate new index for item. better than chaining.
+      .linear probing: try next slot until empty one found.
+      .quadratic probing: try 1/2/4/8/... slots far away.
+      .rehashing: hash result again.
+* space O(n), search O(1)/O(n), insert O(1)/O(n), delete O(1)/O(n)
+* dynamic resizing: find optimal LF.
+   - space-time tradeoff: LF exceeds threshold then resize.
+   - java: if LF > 0.75 then resize automatically.
+   - python: 2/3 ~ 0.66
+   - resizing O(n)
