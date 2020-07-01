@@ -209,3 +209,4 @@ F(0) = 0, F(1) = 1
    - java: if LF > 0.75 then resize automatically.
    - python: 2/3 ~ 0.66
    - resizing O(n)
+* applications of hashing: index generation, crypthography, file comparision, password verification, blockchain

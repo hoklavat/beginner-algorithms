@@ -17,3 +17,4 @@ Compiler/IDE: MinGW GCC/Codelite
 14- Data Structures (Queue - Linked List)
 15- Data Structures (Binary Search Tree)
 16- Data Structures (Heap)
+17- Data Structures (Hash Table - Chaining Collision Prevention)
