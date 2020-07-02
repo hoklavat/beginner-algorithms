@@ -210,3 +210,25 @@ F(0) = 0, F(1) = 1
    - python: 2/3 ~ 0.66
    - resizing O(n)
 * applications of hashing: index generation, crypthography, file comparision, password verification, blockchain
+
+[GRAPH THEORY]
+* mathematical structures to model pairwise relations between given objects.
+* G(V, E): graph = vertice + edge (vertice = node)
+* types: directed, undirected
+* representation models: adjaceny matrixes, edge list representation
+* adjacency matrix
+   - A(i, j) = 1 (nodes i, j are directly connected)
+   - A(i, j) = 0 (nodes i, j are not directly connected)
+   - A(i, i) = 0 (nodes are not connected to themselves)
+* edge list representation
+   - vertex class (vertex_name, visited, neighbors)
+* applications: shortest path algorithm, graph traversing, spanning trees, maximum flow problem
+
+[BREADTH FIRST SEARCH]
+* graph traversal algorithm.
+* visit every node only once. visit all nodes row-by-row.
+* queue, dequeue, visit children, repeat
+* running time complexity: O(V+E)
+* memory complexity bad. lots of references.
+* first-in first out.
+* applications: dijsktra, machine learning, edmonds-karp maximum flow, cheyen garbage collection, reference detection, serialization/deserialization, web-crawler, network topology, barabasi popular websites

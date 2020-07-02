@@ -18,3 +18,4 @@ Compiler/IDE: MinGW GCC/Codelite
 15- Data Structures (Binary Search Tree)
 16- Data Structures (Heap)
 17- Data Structures (Hash Table - Chaining Collision Prevention)
+18- Graph Algorithms (Breadth First Search)
