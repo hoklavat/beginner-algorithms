@@ -19,3 +19,4 @@ Compiler/IDE: MinGW GCC/Codelite
 16- Data Structures (Heap)
 17- Data Structures (Hash Table - Chaining Collision Prevention)
 18- Graph Algorithms (Breadth First Search)
+19- Graph Algorithms (Depth First Search)

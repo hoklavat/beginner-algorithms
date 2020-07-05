@@ -209,7 +209,7 @@ F(0) = 0, F(1) = 1
    - java: if LF > 0.75 then resize automatically.
    - python: 2/3 ~ 0.66
    - resizing O(n)
-* applications of hashing: index generation, crypthography, file comparision, password verification, blockchain
+* applications of hashing: index generation, crypthography, file comparision, password verification, blockchain, ...
 
 [GRAPH THEORY]
 * mathematical structures to model pairwise relations between given objects.
@@ -222,13 +222,22 @@ F(0) = 0, F(1) = 1
    - A(i, i) = 0 (nodes are not connected to themselves)
 * edge list representation
    - vertex class (vertex_name, visited, neighbors)
-* applications: shortest path algorithm, graph traversing, spanning trees, maximum flow problem
+* applications: shortest path algorithm, graph traversing, spanning trees, maximum flow problem, ...
 
 [BREADTH FIRST SEARCH]
 * graph traversal algorithm.
 * visit every node only once. visit all nodes row-by-row.
 * queue, dequeue, visit children, repeat
 * running time complexity: O(V+E)
-* memory complexity bad. lots of references.
+* memory complexity bad. lots of references. O(N).
 * first-in first out.
-* applications: dijsktra, machine learning, edmonds-karp maximum flow, cheyen garbage collection, reference detection, serialization/deserialization, web-crawler, network topology, barabasi popular websites
+* applications: dijsktra, machine learning, edmonds-karp maximum flow, cheyen garbage collection, reference detection, serialization/deserialization, web-crawler, network topology, barabasi popular websites, ...
+
+[DEPTH FIRST SEARCH]
+* graph traversal algorithm. layer-by-layer algorithm.
+* running time complexity: O(V+E) (vertices + edges)
+* memory complexity better than bfs. O(logN).
+* maze solving.
+* explore as far as possible along each branch before backtracing.
+* furthest vertex before visiting neighbour.
+* applications: topological ordering, kosaraju strongly connected components algorithm, detecting cycles (DAG graph or not), generate/solve maze, ...
