@@ -53,3 +53,23 @@
   - Depth First Search
 
 [SOURCE LIST]
+01-Recursion(HeadTail)
+02-Recursion(Sum)
+03-Recursion(Factorial)
+04-Recursion(Fibonacci)
+05-Recursion(BinarySearch)
+06-Backtracking(N-Queens)
+07-Backtracking(GraphColoring)
+08-Backtracking(KnightsTour)
+09-DynamicProgramming(Fibonacci)
+10-DynamicProgramming(Knapsack)
+11-Sorting(BubbleSort)
+12-Sorting(SelectionSort)
+13-Sorting(InsertionSort)
+14-Sorting(BucketSort)
+15-Sorting(MergeSort)
+16-Sorting(QuickSort)
+17-Sorting(HeapSort)
+18-Sorting(CountingSort)
+19-Sorting(RadixSort)
+20-Sorting(ShellSort)
