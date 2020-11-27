@@ -73,3 +73,5 @@
 18-Sorting(CountingSort)
 19-Sorting(RadixSort)
 20-Sorting(ShellSort)
+21-DataStructures(SingleDimensionArray)
+22-DataStructures(TwoDimensionArray)
