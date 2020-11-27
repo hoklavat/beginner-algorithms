@@ -1,22 +1,55 @@
-**C++ ALGORITHMS SOURCE LIST**
-Compiler/IDE: MinGW GCC/Codelite
+*** ALGORITHMS AND DATA STRUCTURES ***
 
-01- Numeric Item
-02- Numeric Tree
-03- Numeric List
-04- Recursion (Sum, Factorial, Tail/Head/Taylor Recursion, Fibonacci, Binary Search, Towers of Hanoi)
-05- Backtracking (N-Queen's Problem)
-06- Backtracking (Vertex Coloring Problem)
-07- Backtracking (Knight's Tour Problem)
-08- Dynamic Programming (Fibonacci)
-09- Dynamic Programming (Knapsack Problem)
-10- Data Structures (Array)
-11- Data Structures (Linked List)
-12- Data Structures (Stack - Array)
-13- Data Structures (Stack - Linked List)
-14- Data Structures (Queue - Linked List)
-15- Data Structures (Binary Search Tree)
-16- Data Structures (Heap)
-17- Data Structures (Hash Table - Chaining Collision Prevention)
-18- Graph Algorithms (Breadth First Search)
-19- Graph Algorithms (Depth First Search)
+[SOFTWARE]
+* Compiler: MinGW (http://www.mingw.org/)
+* Integrated Development Environment: CodeLite (https://codelite.org/)
+
+[ALGORITHMS]
+* Recursion
+  - Factorial
+  - Fibonacci
+  - Hanoi Towers
+  - Binary Search
+* Back Tracking
+  - N-Queens
+  - Vertex Coloring
+  - Knight's Tour
+* Dynamic Programming
+  - Fibonacci
+  - Knapsack
+* Sorting
+  - Bubble Sort
+  - Selection Sort
+  - Insertion Sort
+  - Bucket Sort
+  - Merge Sort
+  - Quick Sort
+  - Heap Sort
+  - Radix Sort
+  - Counting Sort
+  - Shell Sort
+* Magic Framework
+* Greedy Algorithm
+* Divide&Conquer
+
+[INDEPENDENT DATA STRUCTURES]
+* Array
+  - One Dimensional Array
+  - Two Dimensional Array
+* Linked List
+  - Single Linked List
+  - Single Circular Linked List
+  - Double Linked List
+  - Double Circular Linked List
+
+[DEPENDENT DATA STRUCTURES]
+* Stack
+* Queue
+* Tree
+* Heap
+* Hash
+* Graph
+  - Breadth First Search
+  - Depth First Search
+
+[SOURCE LIST]

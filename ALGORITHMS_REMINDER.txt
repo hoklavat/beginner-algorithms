@@ -1,23 +1,41 @@
-****ALGORITHMS****
+*** ALGORITHMS AND DATA STRUCTURES ***
+
+[RUN TIME ANALYSIS]
+- worst/best/averaga case run time.
+- notations:
+   - omega: minimum required time. lowerbound. no less than given time. best case.
+   - big-o: maximum required time. upperbound. no more than given time. worst case.
+   - theta: between upperbound and lowerbound. on an average to given time. average case.
+- running time complexities: 
+   - constant O(1)
+   - logarithmic O(logn)
+   - linear O(n)
+   - linear logarithmic O(nlogn)
+   - quadratic O(n^2)
+   - cubic O(n^3)
+   - exponential O(2^n)
 
 [RECURSION]
-* function call inside same function.
+* function calls itself.
+* recursive case and base case.
+* base condition stops recursion.
 * can be transformed into iteration. vice versa.
 * each recursive call has its own stack frame isolated from each other.
 * tail recursion: call function at the end. no stack overflow.
 * head recursion: call function at the beginning. push previous states to stack then pop them from stack. stack overflow risk.
 * taylor recursion: store previous states in accumulator then pass to next call. memory efficient.
-* sum, factorial, fibonacci, binary search, towers of hanoi, ...
+* applicable to problems that can be broken down into similar sub-problems.
+* examples: sum, factorial, fibonacci, binary search, towers of hanoi, stack, tree, quick sort, merge sort, divide and conquer, dynamic programming, ...
 
 [LINEAR SEARCH]
-* unsorted array. one by one. O(N) running time. N array elements.
+* unsorted array. one by one. O(n). n: number of array elements.
 
 [BINARY SEARCH]
-* sorted array. O(logN) running time. tail recursion. N array elements.
+* sorted array. O(logn). tail recursion. n: number of array elements.
 * divide array in half. if smaller than middle take left-hand otherwise right-hand then repeat.
 
 [TOWERS OF HANOI]
-* O(2^N) running time. N number of disks.
+* O(2^n). n: number of disks.
 * three rods. many disks. one disk at a time. uppermost disk can move. smaller on larger.
 
 [BACKTRACKING]
@@ -29,7 +47,7 @@
 * meta-heuristics: approximate solutions to np problems. ant-colony optimization, genetic algorithms, simulated annealing
 
 [N-QUEEN's PROBLEM]
-* placing N queens on an NxN chess board such that no queen threatens any other.
+* placing n queens on an nxn chess board such that no queen threatens any other.
 
 [VERTEX COLORING PROBLEM]
 * np-complete problem.
@@ -49,21 +67,21 @@
   - m = 3 and n = 4, 6 or 8
 
 [DYNAMIC PROGRAMMING]
-* dynamic programming: dividing complex problems into simpler sub-programs. overlapping sub-problems. O(N) linear time complexity.
-* memoization: store previous calculations and fetch them if needed later. don't recalculate. O(1) time complexity.
+* dynamic programming: dividing complex problems into simpler sub-programs. overlapping sub-problems. O(n).
+* memoization: store previous calculations and fetch them if needed later. don't recalculate. O(1).
 * divide and conquer: combining optimal solutions to non-overlapping sub-problems. merge/quick sort.
 
 [FIBONACCI NUMBERS]
-F(N) = F(N-1) + F(N-2)
+F(n) = F(n-1) + F(n-2)
 F(0) = 0, F(1) = 1
 
 [KNAPSACK PROBLEM]
 * combinatorial optimization. resource allocation.
 * set of N items, each has mass w and value v. total mass in knapsack shouldn't exceed W. make total value V large as possible.
-* divisible knapsack problem: if there are fractions of items then greedy approach.
-  - sort items according to their values. O(N*logN) time complexity.
-  - start with most valuable item and take as much as possible. then try with next item. O(N) time complexity.
-  - overall time complexity: O(N*logN) + O(N) = O(N*logN)
+* divisible knapsack problem: if there are fractions of items then use greedy approach.
+  - sort items according to their values. O(n*logn).
+  - start with most valuable item and take as much as possible. then try with next item. O(n).
+  - overall time complexity: O(n*logn) + O(n) = O(n*logn)
 * 0-1 knapsack problem: no fractions.
 * S[i][w]: maximum cost of items that fit inside a knapsack of size weight w, choosing from the first i items.
 * S[i][w] = Math.max(S[i-1][w]; vi + S[i-1][w-wi])
@@ -71,33 +89,93 @@ F(0) = 0, F(1) = 1
   - items rows: 0-N
   - knapsack with weight capacity x, number of items y, each item has a value, obtain maximum possible value without exceeding x.
   - value in last row-column
-* O(n*W) running time. pseudo-polynomial. running time; polynomial in numeric value, exponential in the length of the input.
+* O(n*W): pseudo-polynomial. running time; polynomial in numeric value, exponential in the length of the input.
+
+[BUBBLE SORT]
+* simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+* worst time complexity: O(n*n). array is reverse sorted.
+* best time complexity: O(n). array is already sorted.
+* auxiliary space: O(1).
+
+[SELECTION SORT]
+* repeatedly find minimum element (considering ascending order) from unsorted part and putit at the beginning.
+* two subarrays in a given array; subarray which is already sorted, subarray which is unsorted.
+* time complexity: O(n^2).
+* auxiliary space: O(1).
+
+[INSERTION SORT]
+* array is virtually split into sorted and unsorted part. values from unsorted part are picked and placed at correct position in sorted part.
+* time complexity: O(n*2).
+* auxiliary space: O(1).
+
+[BUCKET SORT]
+* mainly useful when input is uniformly distributed over a range of floating point numbers between 0 and 1.
+   - create n empty buckets.
+   - put array elements in different buckets.
+   - sort individual buckets.
+   - concatenate all buckets into array.
+* time complexity: O(n).
+
+[MERGE SORT]
+* divide and conquer algorithm.
+* divides input array into two halves, calls itself for two halves, and then merges two sorted halves.
+* time complexity: O(nlogn).
+* auxiliary space: O(n).
+
+[QUICK SORT]
+* divide and conquer algorithm.
+* pick element as pivot and partition given array around picked pivot. 
+* pick first, last, random or median element as pivot.
+* time complexity: worst O(n^2), best O(nlogn).
+
+[HEAP SORT]
+*  first find maximum element and place itt at end. repeat same process for remaining elements.
+*  binary heap is complete binary tree where items are stored in special order such that value in parent node is greater(or smaller) than values in its two children nodes. 
+* time complexity: O(nlogn).
+
+[COUNTING SORT]
+* sorting technique based on keys between a specific range.
+* count number of objects having distinct key values. then calculate position of each object in output sequence.
+* time complexity: O(n+k).
+* auxiliary space: O(n+k).
+
+[RADIX SORT]
+* do digit by digit sort starting from least significant digit to most significant digit. Radix sort uses counting sort as a subroutine to sort.
+
+[SHELL SORT]
+* variation of insertion sort that allows exchange of far items rather than moving elements only one position ahead.
 
 [ARRAY]
-* index-value. 
-* first index 0.
-* random access.
-* two-dimensional, matrix, [row][column].
-* non-resizable, non-dynamic.
-* dynamic array: resizable.
-* O(1) constant running time; get single item, add to last, remove from last.
-* O(N) linear running time; reconstruction, insertion by pos, remove by pos.
+* collection of elements with specific type in a contiguous memory locations.
+* index, points to memory location of an element in the array.
+* first index is 0.
+* random access, non-resizable, non-dynamic. dynamic array is resizable.
+* one or multi dimensional.
+* two-dimensional is called matrice containing rows and columns. [r][c].
+* three-dimensional array is array of matrices. [depth][r][c].
+* operations: declare, instantiate, initialize, access, insert, traverse, search, delete. dynamic array; add, remove.
+* traverse: visit each element once.
+* O(1): get single item, add to last, remove from last.
+* O(n): reconstruction, insertion by pos, remove by pos. n: number of elements.
 * insert/remove by pos takes much time because of shifting.
-* operations: add, insert, remove
 
 [LINKED LIST]
-* node: data + next-node-reference.
-* next-node-reference at last node points to NULL.
-* no random access. sequential access.
-* dynamic. runtime memory allocation.
-* efficient for first elements.
-* elements with different sizes.
-* stack, queue implementation.
-* high memory due to references.
-* diffucult to navigate backwards.
-* O(1) running time; insert at start, remove from start. 
-* O(N) running time; insert at last, remove by pos.
-* operations: insertAtStart, insertAtEnd, removeStart, remove.
+* each element is called node. node contains, data and reference to next node. head and tail nodes.
+* elements are stored in non-contiguous memory locations.
+* reference to next node at the last node points to NULL.
+* sequential access, resizable, dynamic. runtime memory allocation.
+* operations on first elements are more efficient.
+* elements with different sizes are possible.
+* high memory usage because of references.
+* navigating backwards is diffucult.
+* O(1): insert at start, remove from start. 
+* O(N): insert at last, remove by pos.
+* applications: stack, queue.
+* types: single, circular single, double, double circular.
+   - single: reference to next node in last node points to null.
+   - double: each node holds reference to next node and previous node.
+   - circular: reference to next node in last node points to first node.
+* operations: create, insert, traverse, search, delete node, delete linked list.
 
 [STACK]
 * abstract. interface.
