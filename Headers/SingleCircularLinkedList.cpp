@@ -8,8 +8,8 @@ using namespace std;
 
 class SingleCircularLinkedList{
 private:
-	SingleNode *head; //first node in linked list.
-	SingleNode *tail; //last node in linked list.
+	SingleNode *head;
+	SingleNode *tail;
 	int size;
 
 public:
@@ -43,7 +43,7 @@ public:
 	bool exists(){return head != nullptr;}
 	
 	//insert.
-	void insert(int v, int l){ //insert new node with value at specific position in linked list.
+	void insert(int v, int l){
 		SingleNode *node = new SingleNode(v);
 		if(!exists()){
 			cout << "ERROR: linked list doesn't exist." << endl;
@@ -52,7 +52,7 @@ public:
 		else if(l == 0){ //insert at first position. 
 			node->setNext(head);
 			head = node;
-			tail->setNext(node); //next node of tail is it points to head node in circular list.
+			tail->setNext(node);
 		}
 		else if(l >= size){ //insert at last position.
 			tail->setNext(node);
@@ -63,7 +63,7 @@ public:
 			SingleNode *temp = head;
 			int index = 0;
 			while(index < l-1){
-				temp = temp->getNext(); //iterate until reaching preciding node.
+				temp = temp->getNext();
 				index++;
 			}
 			node->setNext(temp->getNext());
@@ -124,7 +124,7 @@ public:
 			temp = new SingleNode();
 			temp = head;
 			for(int i = 0; i < getSize()-1; i++){
-				temp = temp->getNext(); //iterate until reaching second last node.
+				temp = temp->getNext();
 			}
 			if(temp == head){
 				tail = nullptr;

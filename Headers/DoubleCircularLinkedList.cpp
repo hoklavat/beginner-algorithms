@@ -1,33 +1,33 @@
-#ifndef DOUBLE_LINKED_LIST
-#define DOUBLE_LINKED_LIST
+#ifndef DOUBLE_CIRCULAR_LINKED_LIST
+#define DOUBLE_CIRCULAR_LINKED_LIST
 
 #include <iostream>
 using namespace std;
 
 #include "DoubleNode.cpp"
 
-class DoubleLinkedList{
+class DoubleCircularLinkedList{
 private:
-	DoubleNode *head;
-	DoubleNode *tail;
-	int size;
+	DoubleNode *head; //first node in linked list.
+	DoubleNode *tail; //last node in linked list.
+	int size; //number of elements.
 
 public:
-	DoubleLinkedList(): DoubleLinkedList(0){}
+	DoubleCircularLinkedList(): DoubleCircularLinkedList(0){}
 
-	DoubleLinkedList(int v){
+	DoubleCircularLinkedList(int v){
 		DoubleNode *node;
 		node = new DoubleNode(v);			
 		head = new DoubleNode();
 		tail = new DoubleNode();
-		node->setPrev(nullptr);
-		node->setNext(nullptr);	
+		node->setPrev(node);
+		node->setNext(node);	
 		head = node;
 		tail = node;
 		size = 1;
 	}
 	
-	~DoubleLinkedList(){
+	~DoubleCircularLinkedList(){
 		delete head;
 		delete tail;
 		cout << "Link list destructed." << endl;
@@ -53,13 +53,15 @@ public:
 		}
 		else if(l == 0){ //insert at first position. 
 			node->setNext(head);
-			node->setPrev(nullptr);
+			node->setPrev(tail);
 			head->setPrev(node);
+			tail->setNext(node);
 			head = node;
 		}
 		else if(l >= size){ //insert at last position.
-			node->setNext(nullptr);			
+			node->setNext(head);
 			node->setPrev(tail);
+			head->setPrev(node);
 			tail->setNext(node);
 			tail = node;
 		}
@@ -70,9 +72,8 @@ public:
 				temp = temp->getNext();
 				index++;
 			}
-			DoubleNode *tempNext = temp->getNext();
 			node->setPrev(temp);
-			node->setNext(tempNext);
+			node->setNext(temp->getNext());
 			temp->setNext(node);
 			node->getNext()->setPrev(node);
 		}
@@ -139,6 +140,8 @@ public:
 		}
 		else if(l == 0){ //delete first node.
 			if(getSize() == 1){
+				head->setNext(nullptr);
+				tail->setNext(nullptr);
 				head = nullptr;
 				tail = nullptr;
 				setSize(getSize()-1);
@@ -146,22 +149,22 @@ public:
 			}
 			head = head->getNext();
 			head->setPrev(nullptr);
+			tail->setNext(head);
 			setSize(getSize()-1);
 		}
 		else if(l >= getSize()-1){ //delete last node.
-		
-			DoubleNode *temp;
-			temp = new DoubleNode();
-			temp = tail->getPrev();
-			if(temp == head){
+			if(getSize() == 1){
+				head->setNext(nullptr);
+				head->setPrev(nullptr);
 				tail = nullptr;
 				head = nullptr;
 				setSize(getSize()-1);
 				return;
 			}
-			temp->setNext(nullptr);
-			tail = temp;
-			setSize(getSize()-1);
+			tail = tail->getPrev();
+			tail->setNext(head);
+			head->setPrev(tail);
+			setSize(getSize()-1);			
 		}
 		else{ //delete middleware node.
 			DoubleNode *temp;
@@ -178,17 +181,17 @@ public:
 	
 	//delete linked list.
 	void deleteList(){
-		DoubleNode *temp;
-		temp = new DoubleNode();
-		temp = head;
-		for(int i = 0; i < size; i++){
-			temp->setPrev(nullptr);
-			temp = temp->getNext();
+		if(tail == nullptr){
+			cout << "Linked list already deleted." << endl;
+			return;
 		}
-		
-		head = nullptr;
-		tail = nullptr;
-		cout << "Link list deleted." << endl;
+		else{
+			head->setPrev(nullptr);
+			tail->setNext(nullptr);
+			head = nullptr;
+			tail = nullptr;
+			cout << "Linked list deleted." << endl;
+		}
 	}	
 };
 

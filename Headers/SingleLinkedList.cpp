@@ -43,31 +43,31 @@ public:
 	bool exists(){return head != nullptr;}
 	
 	//insert.
-	void insert(int v, int l){ //value, location.
+	void insert(int v, int l){
 		SingleNode *node = new SingleNode(v);
 		if(!exists()){
 			cout << "ERROR: linked list doesn't exist." << endl;
 			return;
 		}
 		else if(l == 0){ //insert at first position. 
-			node->setNext(head); //push previous head forward.
-			head = node; //make self new head.
+			node->setNext(head);
+			head = node;
 		}
 		else if(l >= size){ //insert at last position.
-			node->setNext(nullptr); //next is null.
-			tail->setNext(node); //push previous tail backward.
-			tail = node; //make self new tail.
+			node->setNext(nullptr);
+			tail->setNext(node);
+			tail = node;
 		}
-		else{ //insert at specified location.
+		else{ //insert at middleware position.
 			SingleNode *temp = head;
 			int index = 0;
 			while(index < l-1){
 				temp = temp->getNext();
-				index++; //jump forward until reaching specified node.
+				index++;
 			}
-			SingleNode *tempNext = temp->getNext();
+			SingleNode *tempNext = temp->getNext(); 
 			temp->setNext(node);
-			node->setNext(tempNext);			
+			node->setNext(tempNext);
 		}
 		setSize(getSize()+1);
 	}
@@ -87,8 +87,7 @@ public:
 			temp = temp->getNext();
 		}
 		cout << endl;
-	}
-	
+	}	
 	
 	//search.
 	int search(int v){
@@ -124,7 +123,7 @@ public:
 			temp = new SingleNode();
 			temp = head;
 			for(int i = 0; i < size-1; i++){
-				temp = temp->getNext(); //iterate until reaching second last node.
+				temp = temp->getNext();
 			}
 			if(temp == head){
 				tail = nullptr;
@@ -136,7 +135,7 @@ public:
 			tail = temp;
 			setSize(getSize()-1);
 		}
-		else{
+		else{ //delete middleware node.
 			SingleNode *temp;
 			temp = new SingleNode();
 			temp = head;
@@ -153,9 +152,7 @@ public:
 		head = nullptr;
 		tail = nullptr;
 		cout << "Link list deleted." << endl;
-	}
-	
-	
+	}	
 };
 
 #endif

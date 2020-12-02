@@ -10,11 +10,22 @@ public:
 	SingleNode(): SingleNode(0){}
 	SingleNode(int v): value(v), next(nullptr){}
 	
-	void setValue(int v){value = v;}
-	int getValue(){return value;}
+	void setValue(int v){
+		value = v;
+	}
 	
-	void setNext(SingleNode *n){next = n;}
-	SingleNode *getNext(){return next;}
+	int getValue(){
+		return value;
+	}
+	
+	void setNext(SingleNode *n){
+		next = new SingleNode(); 
+		next = n;
+	}
+	
+	SingleNode *getNext(){
+		return next;
+	}
 };
 
 #endif
