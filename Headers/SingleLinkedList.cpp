@@ -78,7 +78,7 @@ public:
 			cout << "ERROR: linked list doesn't exist." << endl;
 			return;
 		}
-		cout << "\nContents of List: ";
+		cout << "Contents of List: ";
 		SingleNode *temp;
 		temp = new SingleNode();
 		temp = head;

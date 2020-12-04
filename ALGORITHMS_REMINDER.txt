@@ -181,7 +181,7 @@ F(0) = 0, F(1) = 1
 * abstract. interface.
 * last-in first-out.
 * operations: pop, push, peek.
-* graph algorithms: depth-first search/euler-cycles/strongly connected components, binary search tree traversal, linked list search, ...
+* graph algorithms: depth-first search, euler-cycles, strongly connected components, binary search tree traversal, linked list search, ...
 * call stack: special memory region. os-managed. limited-size. not resizable. return points and temporary variables for subroutines. faster.
 * heap: special memory region. user-managed. unlimited-size. resizable. deallocation required otherwise memory leak. pointers. objects. slower.
 * recursive algorithms can be transformed into simple method with stacks. too many function calls results in stack overflow.
@@ -191,7 +191,7 @@ F(0) = 0, F(1) = 1
 * abstract. interface.
 * first-in first-out.
 * operations: enqueue, dequeue, peek.
-* graph algorithms: breadth first search graph reversal, threading, asynchronous data transfer,  stochastic models.
+* graph algorithms: breadth-first search, graph reversal, threading, asynchronous data transfer,  stochastic models, ...
 * head:first-node, tail:last-node.
 
 [BINARY SEARCH TREE]

@@ -8,9 +8,9 @@ using namespace std;
 
 class DoubleLinkedList{
 private:
-	DoubleNode *head;
-	DoubleNode *tail;
-	int size;
+	DoubleNode *head; //first node in linked list.
+	DoubleNode *tail; //last node in linked list.
+	int size; //number of elements.
 
 public:
 	DoubleLinkedList(): DoubleLinkedList(0){}
