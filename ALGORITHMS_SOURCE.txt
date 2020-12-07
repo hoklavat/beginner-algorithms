@@ -81,3 +81,6 @@
 26-DataStructures(DoubleLinkedList)
 27-DataStructures(SingleCircularLinkedList)
 28-DataStructures(DoubleCircularLinkedList)
+29-DataStructures(Stack)
+30-DataStructures(Queue)
+31-DataStructures(BinaryTree)

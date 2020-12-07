@@ -1,7 +1,7 @@
 *** ALGORITHMS AND DATA STRUCTURES ***
 
 [RUN TIME ANALYSIS]
-- worst/best/averaga case run time.
+- worst/best/average case run time.
 - notations:
    - omega: minimum required time. lowerbound. no less than given time. best case.
    - big-o: maximum required time. upperbound. no more than given time. worst case.
@@ -194,7 +194,10 @@ F(0) = 0, F(1) = 1
 * graph algorithms: breadth-first search, graph reversal, threading, asynchronous data transfer,  stochastic models, ...
 * head:first-node, tail:last-node.
 
-[BINARY SEARCH TREE]
+[BINARY TREE]
+* tree whose elements have at most 2 children is called binary tree. hierarchical data structure. array, linked-list, stack, queue are linear data structures.
+* each element (parent node) in binary tree can have only 2 subnodes(children nodes) named as left and right child. top most node is root node.
+* node with no children is called leaf.
 * array: binary search fast O(logN), insert/remove slow O(N).
 * linked list: binary search slow O(N), insert/remove fast O(1).
 * binary search tree: binary search/insert/remove fast O(logN). (balanced tree)
@@ -207,7 +210,6 @@ F(0) = 0, F(1) = 1
    - right child is greater than parent.
    - leftmost node is smallest.
    - rightmost node is largest.
-* leaf node has no children.
 * balanced tree: left children = right children approximately.
 * predecessor: largest in left subtree.
 * successor: smallest in right subtree.
