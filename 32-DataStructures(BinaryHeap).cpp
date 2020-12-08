@@ -5,8 +5,8 @@
 #include "Headers/BinaryHeap.cpp"
 
 int main() { 
-    MinHeap h(10); 
-    h.insertKey(6);
+	MinHeap h(10); 
+	h.insertKey(6);
 	h.insertKey(9);
 	h.insertKey(1);
 	h.insertKey(7);
@@ -26,5 +26,5 @@ int main() {
 	h.decreaseKey(3, -5);
 	cout << "Root after Replacement: " << h.getMin() << endl << endl;
 	
-    return 0; 
+	return 0; 
 } 
