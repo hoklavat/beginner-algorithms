@@ -239,8 +239,11 @@ F(0) = 0, F(1) = 1
 * operations: insertWithPriority, getHighestPriority, peek
 * sorting: sequence of decreasing priorities. tree-sort, heap-sort.
 
-[HEAP]
-* binary tree. priority queue. naturally balanced. dijkstra and prims algorithms.
+[BINARY HEAP]
+* complete binary tree.
+* all levels are completely filled except possibly last level and last level has all keys as left as possible.
+* in a min binary heap, key at root must be minimum among all keys present in binary heap. in a max binary heap root key must be maximum. 
+* priority queue. naturally balanced. dijkstra and prims algorithms.
 * max heap: keys of parent nodes are greater. root maximum.
 * min heap: keys of parent nodes are smaller. root minimum.
 * parent node i: left node 2i+1: right node 2i+2

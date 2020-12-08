@@ -84,3 +84,4 @@
 29-DataStructures(Stack)
 30-DataStructures(Queue)
 31-DataStructures(BinaryTree)
+32-DataStructures(BinaryHeap)
