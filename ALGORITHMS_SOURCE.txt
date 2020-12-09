@@ -28,8 +28,7 @@
   - Radix Sort
   - Counting Sort
   - Shell Sort
-* Magic Framework
-* Greedy Algorithm
+* Greedy
 * Divide&Conquer
 
 [INDEPENDENT DATA STRUCTURES]
@@ -85,3 +84,5 @@
 30-DataStructures(Queue)
 31-DataStructures(BinaryTree)
 32-DataStructures(BinaryHeap)
+33-DataStructures(Hash)
+

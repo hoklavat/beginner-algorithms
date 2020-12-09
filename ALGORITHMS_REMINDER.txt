@@ -269,18 +269,19 @@ F(0) = 0, F(1) = 1
 * operations: add, remove, update, search value by key.
 * applications: database, word occurence count, storing data, lookup tables, rabin-karp algorithm, ...
 
-[HASH TABLE/DICTIONARY]
-* hash function
+[HASH TABLE/DICTIONARY] 
+* hash function: 
+   - maps keys to some values.
    - distribution of keys uniformly into buckets.
-   - key space -> buckets (array slots).
-   - certain key to any type -> random array index.
+   - key space. buckets. array slots.
+   - certain key to any type. random array index.
    - n: number of keys
    - m: number of buckets (size of array should be prime for uniform distribution for indexes)
    - h(x): k -> m (key to array index)
    - h(x) = n % m (integers)
    - h(x): add up and modulo ascii values for characters. (strings)
    - LF = n/m : load factor (empty ht: 0: memory waste, full ht: 1: slower)
-* collision: different keys to same bucket.
+* collision: occurs when different keys are assigned to same bucket.
    - chaining: store keys in same bucket, connect with linked list.
    - open addressing: generate new index for item. better than chaining.
       .linear probing: try next slot until empty one found.
