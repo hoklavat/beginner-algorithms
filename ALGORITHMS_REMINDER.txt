@@ -5,323 +5,346 @@
 - notations:
    - omega: minimum required time. lowerbound. no less than given time. best case.
    - big-o: maximum required time. upperbound. no more than given time. worst case.
-   - theta: between upperbound and lowerbound. on an average to given time. average case.
-- running time complexities: 
-   - constant O(1)
-   - logarithmic O(logn)
-   - linear O(n)
-   - linear logarithmic O(nlogn)
-   - quadratic O(n^2)
-   - cubic O(n^3)
-   - exponential O(2^n)
+   - theta: between upperbound and lowerbound. on average to given time. average case.
+- common types of running time complexities for big-o:
+   - O(1): constant.
+   - O(logn): logarithmic.
+   - O(n): linear.
+   - O(nlogn): linear logarithmic.
+   - O(n^2): quadratic.
+   - O(n^3): cubic.
+   - O(2^n): exponential.
 
 [RECURSION]
-* function calls itself.
-* recursive case and base case.
-* base condition stops recursion.
-* can be transformed into iteration. vice versa.
+* recursive function: function calls itself until base case is reached.
+* commonly used in problems that can be broken down into similar sub-problems.
+* applications: sum, factorial, fibonacci, binary search, towers of hanoi, stack, tree, quick sort, merge sort, divide and conquer, dynamic programming, ...
+* recursion is stopped when base condition occurs.
+* recursion can be transformed into iteration. 
+* iteration can be transformed into recursion.
 * each recursive call has its own stack frame isolated from each other.
-* tail recursion: call function at the end. no stack overflow.
-* head recursion: call function at the beginning. push previous states to stack then pop them from stack. stack overflow risk.
-* taylor recursion: store previous states in accumulator then pass to next call. memory efficient.
-* applicable to problems that can be broken down into similar sub-problems.
-* examples: sum, factorial, fibonacci, binary search, towers of hanoi, stack, tree, quick sort, merge sort, divide and conquer, dynamic programming, ...
+* tail recursion: function calls itself at end. it prevents stack overflow.
+* head recursion: function calls itself at beginning. it can cause stack overflow, because it pushes previous states to stack, then pops them from stack.
+* taylor recursion: function stores previous states in accumulator then passes to next call. it provides memory efficieny.
+
+[FACTORIAL]
+* n! = 1 * 2 * 3 * ... * n
+* factorial of number n can be calculated with recursion.
+
+[FIBONACCI]
+* F(n) = F(n-1) + F(n-2) (F(0)=0, F(1)=1)
+* nth fibonacci number can be calculated with recursion.
 
 [LINEAR SEARCH]
-* unsorted array. one by one. O(n). n: number of array elements.
+* start from beginning compare each element with searched value until end. 
+* used for unsorted arrays. 
+* running time complexity: O(n). (n: number of elements)
 
 [BINARY SEARCH]
-* sorted array. O(logn). tail recursion. n: number of array elements.
-* divide array in half. if smaller than middle take left-hand otherwise right-hand then repeat.
+* divide sorted array in half. if searched value smaller than middle take left-hand otherwise right-hand then repeat same process for new partition.
+* used for sorted arrays.
+* uses tail recursion.
+* running time complexity: O(logn). (n: number of elements)
 
-[TOWERS OF HANOI]
-* O(2^n). n: number of disks.
-* three rods. many disks. one disk at a time. uppermost disk can move. smaller on larger.
+[HANOI TOWERS]
+* there are three rods and many disks. all disks are placed on rod as smaller is on larger. establish same settlement on last rod by moving uppermost disk 
+on first two rods and only one disk can be moved at time.
+* running time complexity: O(2^n). (n: number of disks)
 
 [BACKTRACKING]
-* constraint satisfaction problems. combinatorial optimization problems. depth-first search.
-* incrementally build possible canditates to solution. abandon invalid canditates and backtrack. solution tree.
-* faster than brute-force which tests all possible solutions.
-* exponential running time. too slow.
-* n-queen's, vertex coloring, sudoku, knight's tour, np-complete, np-hard ...
-* meta-heuristics: approximate solutions to np problems. ant-colony optimization, genetic algorithms, simulated annealing
+* build possible canditates to solution incrementally. abandon invalid canditates and then backtrack. it creates solution tree.
+* it is much faster than brute-force which tests all possible solutions.
+* applications: n-queen's, vertex coloring, sudoku, knight's tour, np-complete, np-hard, constraint satisfaction, combinatorial optimization, 
+depth-first search, meta-heuristics, ...
+* meta-heuristics: approximate solutions to np problems. ant-colony optimization, genetic algorithms, simulated annealing ...
+* running time complexity: O(2^n). (n: number of elements)
 
 [N-QUEEN's PROBLEM]
-* placing n queens on an nxn chess board such that no queen threatens any other.
+* place n queens on nxn chess board such that no queen threatens any other.
 
 [VERTEX COLORING PROBLEM]
-* np-complete problem.
-* coloring vertices of a graph such that no two adjacent vertices share same color.
-* chromatic number: smallest number of colors needed.
+* color vertices of graph such that no two adjacent vertices share same color. chromatic number is smallest number of colors needed.
 * there may be more than one solution.
-* bipartite graph, making schedule, radio frequency assignment, register allocation, map coloring ...
-* four-color theorem.
-* power-welsh algorithm.
+* applications: np-complete problem, four-color theorem, power-welsh algorithm, bipartite graph, making schedule, radio frequency assignment, 
+register allocation, map coloring ...
 
 [KNIGHT's TOUR PROBLEM]
-* knight visits every square on a chessboard exactly once. hamiltonian-path problem.
-* closed knight's tour: knight's ending point is same as the starting point. hamiltonian-cycle problem.
-* Schwenk Theorem: for an mxn chessboard the closed knight tour problem is always feasible, unless:
-  - m and n are both odds
-  - m = 1, 2 or 4
-  - m = 3 and n = 4, 6 or 8
+* can knight visit every square on chessboard exactly once? (hamiltonian-path problem)
+* closed knight's tour: beginning and ending squares are same. (hamiltonian-cycle problem)
+* schwenk theorem: for mxn chessboard closed knight tour problem is always feasible, unless (m and n are both odds) or (m = 1/2/4) or (m = 3 and n = 4/6/8).
 
 [DYNAMIC PROGRAMMING]
-* dynamic programming: dividing complex problems into simpler sub-programs. overlapping sub-problems. O(n).
-* memoization: store previous calculations and fetch them if needed later. don't recalculate. O(1).
-* divide and conquer: combining optimal solutions to non-overlapping sub-problems. merge/quick sort.
+* dynamic programming: divide complex problems into simpler sub-programs then overlap sub-problems. 
+* running time complexity: O(n).
 
-[FIBONACCI NUMBERS]
-F(n) = F(n-1) + F(n-2)
-F(0) = 0, F(1) = 1
+* memoization: store previous calculations in table, then retrieve needed one from table rather than calculating again. 
+* running time complexity: O(1).
+
+* divide and conquer: combining optimal solutions to non-overlapping sub-problems. 
+* applications: merge sort, quick sort.
 
 [KNAPSACK PROBLEM]
+* there are set of N items where each item has mass w and value v. total mass in knapsack shouldn't exceed limit W. make total value of items V as large as possible.
 * combinatorial optimization. resource allocation.
-* set of N items, each has mass w and value v. total mass in knapsack shouldn't exceed W. make total value V large as possible.
-* divisible knapsack problem: if there are fractions of items then use greedy approach.
-  - sort items according to their values. O(n*logn).
-  - start with most valuable item and take as much as possible. then try with next item. O(n).
-  - overall time complexity: O(n*logn) + O(n) = O(n*logn)
-* 0-1 knapsack problem: no fractions.
-* S[i][w]: maximum cost of items that fit inside a knapsack of size weight w, choosing from the first i items.
-* S[i][w] = Math.max(S[i-1][w]; vi + S[i-1][w-wi])
-  - weights columns: 0-W
-  - items rows: 0-N
-  - knapsack with weight capacity x, number of items y, each item has a value, obtain maximum possible value without exceeding x.
-  - value in last row-column
-* O(n*W): pseudo-polynomial. running time; polynomial in numeric value, exponential in the length of the input.
+* divisible knapsack problem: 
+  - if there are fractions of items, greedy approach is used.
+  - sort items according to their values.
+  - start with most valuable item and take as much as possible.
+  - then try with next item.
+  - running time complexity: O(n*logn)
+* 0-1 knapsack problem: there are no fractions. weights are integers.
+  - S[i][w] = Max(S[i-1][w], vi + S[i-1][w-wi]) (maximum cost of items that fit inside knapsack of size weight w, choosing from first i items.)
+  - columns represents possible total weights starting from 0 to W, incremented by one.
+  - rows represents items starting from 0 to N..
+  - value in last row-column gives result.
+  - running time complexity: O(n*W).
 
 [BUBBLE SORT]
-* simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
-* worst time complexity: O(n*n). array is reverse sorted.
-* best time complexity: O(n). array is already sorted.
-* auxiliary space: O(1).
+* simplest sorting algorithm that works by repeatedly swapping adjacent elements if they are in wrong order.
+* worst running time complexity: O(n^2). array is reverse sorted.
+* best running time complexity: O(n). array is already sorted.
 
 [SELECTION SORT]
-* repeatedly find minimum element (considering ascending order) from unsorted part and putit at the beginning.
-* two subarrays in a given array; subarray which is already sorted, subarray which is unsorted.
-* time complexity: O(n^2).
-* auxiliary space: O(1).
+* there are two subarrays in given array; subarray which is already sorted, subarray which is unsorted.
+* repeatedly find minimum element (considering ascending order) from unsorted part and put it at beginning of sorted part.
+* running time complexity: O(n^2).
 
 [INSERTION SORT]
-* array is virtually split into sorted and unsorted part. values from unsorted part are picked and placed at correct position in sorted part.
-* time complexity: O(n*2).
-* auxiliary space: O(1).
+* array is virtually split into sorted and unsorted parts. values from unsorted part are picked and placed at correct position in sorted part.
+* running time complexity: O(n*2).
 
 [BUCKET SORT]
-* mainly useful when input is uniformly distributed over a range of floating point numbers between 0 and 1.
+* mainly useful when input is uniformly distributed over range of floating point numbers between 0 and 1.
    - create n empty buckets.
    - put array elements in different buckets.
    - sort individual buckets.
    - concatenate all buckets into array.
-* time complexity: O(n).
+* running time complexity: O(n).
 
 [MERGE SORT]
 * divide and conquer algorithm.
-* divides input array into two halves, calls itself for two halves, and then merges two sorted halves.
+* divide input array into two half, recursively call self for two half, merge two sorted half.
 * time complexity: O(nlogn).
-* auxiliary space: O(n).
 
 [QUICK SORT]
 * divide and conquer algorithm.
-* pick element as pivot and partition given array around picked pivot. 
-* pick first, last, random or median element as pivot.
-* time complexity: worst O(n^2), best O(nlogn).
+* pick element(first, last, median or random) as pivot and partition given array around picked pivot. 
+* worst running time complexity: O(n^2).
+* best running time complexity: O(nlogn).
 
 [HEAP SORT]
-*  first find maximum element and place itt at end. repeat same process for remaining elements.
-*  binary heap is complete binary tree where items are stored in special order such that value in parent node is greater(or smaller) than values in its two children nodes. 
-* time complexity: O(nlogn).
+* find maximum element and place it at end, then repeat same process for remaining elements.
+* slower than quicksort. 
+* additional memory is not needed.
+* running time complexity: worst case O(nlogn), insert O(1), merge O(logN).
 
 [COUNTING SORT]
-* sorting technique based on keys between a specific range.
-* count number of objects having distinct key values. then calculate position of each object in output sequence.
-* time complexity: O(n+k).
+* sorting technique based on keys between specific range.
+* count number of objects having distinct key values, then calculate position of each object in output sequence.
+* running time complexity: O(n+k).
 * auxiliary space: O(n+k).
 
 [RADIX SORT]
-* do digit by digit sort starting from least significant digit to most significant digit. Radix sort uses counting sort as a subroutine to sort.
+* digit by digit sort starting from least significant digit to most significant digit. 
+* radix sort uses counting sort as subroutine to sort.
 
 [SHELL SORT]
 * variation of insertion sort that allows exchange of far items rather than moving elements only one position ahead.
 
 [ARRAY]
-* collection of elements with specific type in a contiguous memory locations.
-* index, points to memory location of an element in the array.
-* first index is 0.
-* random access, non-resizable, non-dynamic. dynamic array is resizable.
-* one or multi dimensional.
-* two-dimensional is called matrice containing rows and columns. [r][c].
-* three-dimensional array is array of matrices. [depth][r][c].
-* operations: declare, instantiate, initialize, access, insert, traverse, search, delete. dynamic array; add, remove.
+* collection of elements with specific type in contiguous memory locations.
+* index points to memory location of element in array.
+* index of first element is 0.
+* random access: user can access any element directly without traversing other elements.
+* fixed size: cannot be resized after declaration.
+* non-dynamic: cannot add new element or remove existing element.
+* dynamic array is resizable and dynamic. 
+* dimension: can be multi dimensional.
+* two-dimensional array is called matrice that contains rows and columns. [r][c].
+* three-dimensional array is called array of matrices. [depth][r][c].
+* operations: declare, instantiate, initialize, access, insert, traverse, search, delete. in dynamic array; add and remove operations are also possible.
 * traverse: visit each element once.
-* O(1): get single item, add to last, remove from last.
-* O(n): reconstruction, insertion by pos, remove by pos. n: number of elements.
-* insert/remove by pos takes much time because of shifting.
+* running time complexity: O(1) for get single item, add to last, remove from last. O(n) for reconstruction, insertion by pos, remove by pos where n is number of 
+elements. insert/remove by pos takes much time because of shifting.
 
 [LINKED LIST]
-* each element is called node. node contains, data and reference to next node. head and tail nodes.
-* elements are stored in non-contiguous memory locations.
-* reference to next node at the last node points to NULL.
-* sequential access, resizable, dynamic. runtime memory allocation.
-* operations on first elements are more efficient.
-* elements with different sizes are possible.
-* high memory usage because of references.
-* navigating backwards is diffucult.
-* O(1): insert at start, remove from start. 
-* O(N): insert at last, remove by pos.
+* linked list consists of nodes which contain data and reference to next node.
+* nodes are stored in non-contiguous memory locations.
+* head node is first node in list. 
+* tail node is last node in list.
+* reference to next node at last node points to NULL.
+* sequential access: cannot access node without traversing on previous ones. 
+* resizable: new node can be inserted.
+* dynamic: memory can be allocated at runtime.
+* operations are more efficient on first elements.
+* elements having different sizes are possible.
+* memory usage is high because of references.
+* backward navigation is diffucult.
 * applications: stack, queue.
-* types: single, circular single, double, double circular.
-   - single: reference to next node in last node points to null.
+* types: single, single circular, double, double circular.
+   - single: reference to next node in tail node points to null.
    - double: each node holds reference to next node and previous node.
-   - circular: reference to next node in last node points to first node.
+   - circular: reference to next node in tail node points to head node.
 * operations: create, insert, traverse, search, delete node, delete linked list.
+* running time complexity: O(1) for insert at start, remove from start, O(N) for insert at last, remove by pos.
 
 [STACK]
-* abstract. interface.
+* abstract interface.
 * last-in first-out.
-* operations: pop, push, peek.
-* graph algorithms: depth-first search, euler-cycles, strongly connected components, binary search tree traversal, linked list search, ...
-* call stack: special memory region. os-managed. limited-size. not resizable. return points and temporary variables for subroutines. faster.
-* heap: special memory region. user-managed. unlimited-size. resizable. deallocation required otherwise memory leak. pointers. objects. slower.
-* recursive algorithms can be transformed into simple method with stacks. too many function calls results in stack overflow.
-* O(1) running time; push, pop.
+* operations:
+   - push: put at top.
+   - pop: get from top.
+   - peek: what is at top.
+* applications: graph algorithms, depth-first search, euler cycles, strongly connected components, binary search tree traversal, linked list search, ...
+* call stack: operating system managed, limited and fixed sized, special memory region that is used for return points and temporary variables for subroutines.
+* heap: user managed, unlimited and dynamic sized, special memory region that is used for pointers and objects. deallocation required otherwise memory leak. 
+* heap is slower than stack.
+* recursive algorithms can be transformed into simple method with stacks. 
+* too many function call can result in stack overflow.
+* running time complexity: O(1) for push, pop.
 
 [QUEUE]
-* abstract. interface.
+* abstract interface.
 * first-in first-out.
-* operations: enqueue, dequeue, peek.
-* graph algorithms: breadth-first search, graph reversal, threading, asynchronous data transfer,  stochastic models, ...
-* head:first-node, tail:last-node.
+* operations: 
+   - enqueue: put at start node (head).
+   - dequeue: get from end node (tail).
+   - peek: what is at end.
+* applications: graph algorithms, breadth-first search, graph reversal, threading, asynchronous data transfer,  stochastic models, ...
 
 [BINARY TREE]
-* tree whose elements have at most 2 children is called binary tree. hierarchical data structure. array, linked-list, stack, queue are linear data structures.
-* each element (parent node) in binary tree can have only 2 subnodes(children nodes) named as left and right child. top most node is root node.
-* node with no children is called leaf.
+* hierarchical data structure, that organizes nodes where each node (parent) have at most 2 children (left and right child). 
+* array, linked-list, stack, queue are linear data structures.
+* node at top is root node.
+* there is only one path from root node to any other node.
+* node with no children is leaf.
 * array: binary search fast O(logN), insert/remove slow O(N).
 * linked list: binary search slow O(N), insert/remove fast O(1).
 * binary search tree: binary search/insert/remove fast O(logN). (balanced tree)
-* tree: root node + nodes + edges (connection between nodes)
-* sorted keys.
-* single path from root to any other node.
-* root node - parent node - child node
-   - maximum two children nodes per node.
+* data inserted as sorted.
    - left child is smaller than parent. 
    - right child is greater than parent.
-   - leftmost node is smallest.
-   - rightmost node is largest.
-* balanced tree: left children = right children approximately.
+   - left-most node is smallest.
+   - right-most node is largest.
+* in balanced tree left children are equal to right children approximately.
 * predecessor: largest in left subtree.
 * successor: smallest in right subtree.
-* height of tree: 
+* structure of tree: 
    - number of layers. 
-   - h layer has 2^(h-1) nodes.
+   - ith layer has 2^(i-1) nodes.
    - minimum height: h = logn
-   - if tree is balanced, running time is logarithmic.
-   - if tree is unbalanced running time is linear.
-* insert: greater than root right, smaller than root left. O(logN) - O(N)
-* search: greater than root right, smaller than root left. O(logN) - O(N)
-* delete: O(logN) - O(N)
+* running time complexity: 
+   - if tree is balanced, running time complexity is logarithmic. 
+   - if tree is unbalanced, running time complexity is linear.
+   - insert: O(logN) - O(N).
+   - search: O(logN) - O(N).
+   - delete: O(logN) - O(N).
+   - soft delete: O(logN) + O(1).
    - leaf node: simply remove.
    - single child node: update references.
    - two children node: predecessor/successor/root node swapping.
-* soft delete: node not removed actually, rather marked as removed. not efficient. O(logN) + O(1)
-* traversal: 
+* soft delete: node isn't removed actually, rather it is marked as removed. not efficient. 
+* traversal methods: if data to be inserted is greater than root traverse right, if smaller traverse left.
    - in-order: left subtree + root node + right subtree.
    - pre-order: root node + left subtree + right subtree.
    - post-order: left subtree + right subtree + root node.
-* applications: hierarchical data. os file system, chess, tic-tac-toe, machine learning.
+* applications: hierarchical data, os file system, chess, tic-tac-toe, machine learning.
 
 [PRIORITY QUEUE]
-* abstract. priority.
-* item with highest priority served first.
-* implemented with heap, self-balancing tree.
-* operations: insertWithPriority, getHighestPriority, peek
-* sorting: sequence of decreasing priorities. tree-sort, heap-sort.
+* abstract data structure.
+* every item has priority associated with it. item with highest or lowest priority served first.
+* implemented with heap or self-balancing tree.
+* operations: insert, getHighestPriority, deleteHighestPriority, peek
 
 [BINARY HEAP]
-* complete binary tree.
-* all levels are completely filled except possibly last level and last level has all keys as left as possible.
-* in a min binary heap, key at root must be minimum among all keys present in binary heap. in a max binary heap root key must be maximum. 
-* priority queue. naturally balanced. dijkstra and prims algorithms.
-* max heap: keys of parent nodes are greater. root maximum.
-* min heap: keys of parent nodes are smaller. root minimum.
-* parent node i: left node 2i+1: right node 2i+2
-    0
- 1     2
-3 4   5 6
-   ...
-* construction O(N), reconstruction O(N) + O(logN), delete O(1) + O(logN)
-* delete: last item to removed item.
-* binomial heap: merging two heaps.
-* fibonacci heap:  dijkstra's shortest path, prim's spanning tree, ...
+* binary heap is complete binary tree where items are stored in special order such that parent node key is greater/smaller than children node keys. 
+* all levels are completely filled except possibly last level.
+* minimum binary heap: root key must be minimum among all keys. parent node is smaller than children.
+* maximum binary heap: root key must be maximum among all keys. parent node is greater than children.
+* indexes: 
+   - parent: i
+   - left child: 2i+1
+   - right child: 2i+2
 
-[HEAP SORT]
-* comparision based.
-* worst-case O(NlogN). slower than quicksort. insert O(1). merge O(logN).
-* additional memory not needed. in-place algorithm. insert O(1). merge O(1).
-* swap root + maintain heap.
-* memory complexity O(N), find min/max O(1), insert O(1) + O(log2(N)), remove O(1) + O(logN)
+* delete: last item placed into removed item.
+* binomial heap: constructed by merging two heaps.
+* fibonacci heap: used in dijkstra's shortest path, prim's spanning tree algorithms.
+* running time complexity: construction O(N), reconstruction O(N) + O(logN), delete O(1) + O(logN).
+* applications: priority queue, dijkstra's shortest path algorithm, prim's spanning tree algorithm.
 
 [ASSOCIATIVE ARRAY]
-* abstract. key-value. unique keys. 
-* implementation with binary search tree, hastable.
+* abstract data structure.
+* also called as map or dictionary.
+* data organized in key and value pairs.
+* keys are unique. no duplicate keys.
+* implementated with binary search tree or hashtable.
 * operations: add, remove, update, search value by key.
 * applications: database, word occurence count, storing data, lookup tables, rabin-karp algorithm, ...
 
-[HASH TABLE/DICTIONARY] 
-* hash function: 
-   - maps keys to some values.
-   - distribution of keys uniformly into buckets.
-   - key space. buckets. array slots.
-   - certain key to any type. random array index.
-   - n: number of keys
-   - m: number of buckets (size of array should be prime for uniform distribution for indexes)
-   - h(x): k -> m (key to array index)
-   - h(x) = n % m (integers)
-   - h(x): add up and modulo ascii values for characters. (strings)
-   - LF = n/m : load factor (empty ht: 0: memory waste, full ht: 1: slower)
-* collision: occurs when different keys are assigned to same bucket.
-   - chaining: store keys in same bucket, connect with linked list.
-   - open addressing: generate new index for item. better than chaining.
+[HASH TABLE] 
+* hash function maps keys to some values.
+* keys are distributed uniformly into buckets.
+* buckets are also called as key space or array slots.
+* size of array should be prime for uniform distribution of indexes.
+* parameters of hash table:
+   - number of keys: n
+   - number of buckets: m
+   - hash function: h(x) : k->m (key is assigned to bucket by formula.) 
+   - for integer type: bucket corresponding to key is calculated by taking modulo. (h(x) = n%m)
+   - for string type: add up and modulo ascii values for characters.
+   - load factor: determines memory efficiency and speed optimization. LF = n/m (0: no keys causes memory waste, 1: full table causes slowing)
+* collision occurs when different keys are assigned to same bucket. collision prevention methods are chaining, open addressing.
+   - chaining: keys in same bucket are connected with linked list.
+   - open addressing: new index is generated for item. it is better than chaining.
       .linear probing: try next slot until empty one found.
       .quadratic probing: try 1/2/4/8/... slots far away.
       .rehashing: hash result again.
-* space O(n), search O(1)/O(n), insert O(1)/O(n), delete O(1)/O(n)
-* dynamic resizing: find optimal LF.
-   - space-time tradeoff: LF exceeds threshold then resize.
+* running time complexity: space O(n), search O(1)/O(n), insert O(1)/O(n), delete O(1)/O(n), resizing O(n).
+* dynamic resizing: find optimal load factor.
+   - space-time tradeoff: if LF exceeds threshold then resize.
    - java: if LF > 0.75 then resize automatically.
    - python: 2/3 ~ 0.66
-   - resizing O(n)
-* applications of hashing: index generation, crypthography, file comparision, password verification, blockchain, ...
+* applications: index generation, crypthography, file comparision, password verification, blockchain, ...
 
-[GRAPH THEORY]
+[GRAPH]
+* non-linear data structure consisting of nodes (vertices) and edges which connect nodes with each other.
 * mathematical structures to model pairwise relations between given objects.
-* G(V, E): graph = vertice + edge (vertice = node)
+* G(V, E): graph = vertice + edge
 * types: directed, undirected
 * representation models: adjaceny matrixes, edge list representation
 * adjacency matrix
    - A(i, j) = 1 (nodes i, j are directly connected)
    - A(i, j) = 0 (nodes i, j are not directly connected)
    - A(i, i) = 0 (nodes are not connected to themselves)
-* edge list representation
-   - vertex class (vertex_name, visited, neighbors)
+* edge list representation: vertex class contains vertex name, visited or not, neighbor nodes.
 * applications: shortest path algorithm, graph traversing, spanning trees, maximum flow problem, ...
 
 [BREADTH FIRST SEARCH]
-* graph traversal algorithm.
-* visit every node only once. visit all nodes row-by-row.
-* queue, dequeue, visit children, repeat
-* running time complexity: O(V+E)
+* graph traversal algorithm. row-by-row traversal.
+* queue, dequeue, visit children, repeat.
+* running time complexity: O(V+E) (vertices + edges)
 * memory complexity bad. lots of references. O(N).
 * first-in first out.
-* applications: dijsktra, machine learning, edmonds-karp maximum flow, cheyen garbage collection, reference detection, serialization/deserialization, web-crawler, network topology, barabasi popular websites, ...
+* applications: dijsktra, machine learning, edmonds-karp maximum flow, cheyen garbage collection, reference detection, serialization/deserialization, web-crawler, 
+
+network topology, barabasi popular websites, ...
 
 [DEPTH FIRST SEARCH]
-* graph traversal algorithm. layer-by-layer algorithm.
+* graph traversal algorithm. layer-by-layer traversal.
 * running time complexity: O(V+E) (vertices + edges)
 * memory complexity better than bfs. O(logN).
 * maze solving.
 * explore as far as possible along each branch before backtracing.
 * furthest vertex before visiting neighbour.
 * applications: topological ordering, kosaraju strongly connected components algorithm, detecting cycles (DAG graph or not), generate/solve maze, ...
+
+[AVL TREE]
+* self-balancing binary search tree where the difference between heights of left and right subtrees cannot be more than one for all nodes.
+* tree rotation is operation that changes structure without interfering with order of elements on avl tree.
+* height of an avl tree is always O(Logn) where n is the number of nodes in the tree.
+* methods used to rebalance bst without violating bst property: left rotation, right rotation.
+* there are the possible 4 arrangements for rotation operations; z is first unbalanced node, y is child of z, x is grandchild of z.
+   - y is left child of z and x is left child of y (left-left case)
+   - y is left child of z and x is right child of y (left-right case)
+   - y is right child of z and x is right child of y (right-right case)
+   - y is right child of z and x is left child of y (right-left case)

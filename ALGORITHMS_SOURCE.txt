@@ -33,13 +33,13 @@
 
 [INDEPENDENT DATA STRUCTURES]
 * Array
-  - One Dimensional Array
-  - Two Dimensional Array
+  - One Dimensional
+  - Two Dimensional
 * Linked List
-  - Single Linked List
-  - Single Circular Linked List
-  - Double Linked List
-  - Double Circular Linked List
+  - Single
+  - Single Circular
+  - Double
+  - Double Circular
 
 [DEPENDENT DATA STRUCTURES]
 * Stack
@@ -48,8 +48,8 @@
 * Heap
 * Hash
 * Graph
-  - Breadth First Search
-  - Depth First Search
+* AVL Tree
+* Trie
 
 [SOURCE LIST]
 01-Recursion(HeadTail)
@@ -57,32 +57,35 @@
 03-Recursion(Factorial)
 04-Recursion(Fibonacci)
 05-Recursion(BinarySearch)
-06-Backtracking(N-Queens)
-07-Backtracking(GraphColoring)
-08-Backtracking(KnightsTour)
-09-DynamicProgramming(Fibonacci)
-10-DynamicProgramming(Knapsack)
-11-Sorting(BubbleSort)
-12-Sorting(SelectionSort)
-13-Sorting(InsertionSort)
-14-Sorting(BucketSort)
-15-Sorting(MergeSort)
-16-Sorting(QuickSort)
-17-Sorting(HeapSort)
-18-Sorting(CountingSort)
-19-Sorting(RadixSort)
-20-Sorting(ShellSort)
-21-DataStructures(SingleDimensionArray)
-22-DataStructures(TwoDimensionArray)
-23-DataStructures(SingleNode)
-24-DataStructures(SingleLinkedList)
-25-DataStructures(DoubleNode)
-26-DataStructures(DoubleLinkedList)
-27-DataStructures(SingleCircularLinkedList)
-28-DataStructures(DoubleCircularLinkedList)
-29-DataStructures(Stack)
-30-DataStructures(Queue)
-31-DataStructures(BinaryTree)
-32-DataStructures(BinaryHeap)
-33-DataStructures(Hash)
+06-Recursion(HanoiTowers)
+07-Backtracking(NQueens)
+08-Backtracking(GraphColoring)
+09-Backtracking(KnightsTour)
+10-DynamicProgramming(Fibonacci)
+11-DynamicProgramming(Knapsack)
+12-Sorting(BubbleSort)
+13-Sorting(SelectionSort)
+14-Sorting(InsertionSort)
+15-Sorting(BucketSort)
+16-Sorting(MergeSort)
+17-Sorting(QuickSort)
+18-Sorting(HeapSort)
+19-Sorting(CountingSort)
+20-Sorting(RadixSort)
+21-Sorting(ShellSort)
+22-DataStructures(SingleDimensionArray)
+23-DataStructures(TwoDimensionArray)
+24-DataStructures(SingleNode)
+25-DataStructures(SingleLinkedList)
+26-DataStructures(DoubleNode)
+27-DataStructures(DoubleLinkedList)
+28-DataStructures(SingleCircularLinkedList)
+29-DataStructures(DoubleCircularLinkedList)
+30-DataStructures(Stack)
+31-DataStructures(Queue)
+32-DataStructures(BinaryTree)
+33-DataStructures(BinaryHeap)
+34-DataStructures(Hash)
+35-DataStructures(Graph)
+36-DataStructures(PriorityQueue)
 
