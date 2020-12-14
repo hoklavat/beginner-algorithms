@@ -79,6 +79,7 @@ public:
 		DFSUtil(v, visited);
 	}
 	
+	//topological sort.
 	void topologicalSort(){
 		stack<int> Stack;
 		
