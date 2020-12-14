@@ -350,5 +350,11 @@ network topology, barabasi popular websites, ...
    - y is right child of z and x is left child of y (right-left case)
 
 [TRIE]
-*  tree based data structure, used for efficient retrieval ofkey in large dataset of strings.
-* 
+* tree based data structure, used for efficient retrieval ofkey in large dataset of strings.
+* key character acts as an index into the array children.
+
+[TOPOLOGICAL SORTING]
+* topological sorting for directed acyclic graph (DAG) is linear ordering of vertices such that for every directed edge from u to v, vertex u comes before v in
+ordering. topological sorting for graph is not possible if graph is not DAG.
+* directed acyclic graph (DAG) is directed graph with no directed cycles. it consists of vertices and edges (arcs), with each edge directed from one vertex to another 
+such that there is no way to start at any vertex v and follow consistently-directed sequence of edges that eventually loops back to v again.
