@@ -348,3 +348,7 @@ network topology, barabasi popular websites, ...
    - y is left child of z and x is right child of y (left-right case)
    - y is right child of z and x is right child of y (right-right case)
    - y is right child of z and x is left child of y (right-left case)
+
+[TRIE]
+*  tree based data structure, used for efficient retrieval ofkey in large dataset of strings.
+* 

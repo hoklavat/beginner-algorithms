@@ -28,8 +28,25 @@
   - Radix Sort
   - Counting Sort
   - Shell Sort
-* Greedy
-* Divide&Conquer
+* Graph Algorithms
+  - Topological Sort
+  - Dijkstra’s Shortest Path Algorithm
+  - Bellman Fords Algorithm
+  - Floyd Warshalls Algorithm
+  - Kruskals Algorithm
+  - Prims Algorithm
+* Greedy Algorithms
+  - Activity Selection Problem
+  - Coin Change Problem
+  - Fractional Knapsack Problem
+* Divide&Conquer Algorithms
+  - Fibonacci
+  - Number Factors
+  - House Thief Problem
+  - String Conversion
+  - Zero-One Knapsack
+  - Longest Common Subsequence
+  - Longest Palindromic Subsequence
 
 [INDEPENDENT DATA STRUCTURES]
 * Array
@@ -88,4 +105,5 @@
 34-DataStructures(Hash)
 35-DataStructures(Graph)
 36-DataStructures(PriorityQueue)
-
+37-DataStructures(AVLTree)
+38-DataStructures(Trie)
