@@ -33,6 +33,7 @@
   - Dijkstra Shortest Path Algorithm
   - Bellman-Ford Algorithm
   - Floyd Warshalls Algorithm
+  - Union Find
   - Kruskals Algorithm
   - Prims Algorithm
 * Greedy Algorithms
@@ -111,3 +112,5 @@
 40-GraphAlgorithms(Dijkstra)
 41-GraphAlgorithms(BellmanFord)
 42-GraphAlgorithms(FloydWarshall)
+43-GraphAlgorithms(UnionFind)
+44-GraphAlgorithms(Kruksal)

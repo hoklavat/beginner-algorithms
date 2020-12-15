@@ -359,7 +359,7 @@ ordering. topological sorting for graph is not possible if graph is not DAG.
 * directed acyclic graph (DAG) is directed graph with no directed cycles. it consists of vertices and edges (arcs), with each edge directed from one vertex to another 
 such that there is no way to start at any vertex v and follow consistently-directed sequence of edges that eventually loops back to v again.
 
-[DIJKSTRA’s SHORTEST PATH ALGORITHM]
+[DIJKSTRA SHORTEST PATH ALGORITHM]
 * given graph and source vertex in graph, find shortest paths from source to all vertices in given graph.
 * greedy graph algorithm.
 * generate SPT (shortest path tree) with given source as root. maintain two sets, one set contains vertices included in shortest path tree, other set includes vertices
@@ -376,3 +376,18 @@ from source.
 * find shortest distances between every pair of vertices in given edge weighted directed graph.
 * dynamic graph algorithm.
 * running time complexity: O(V^3). (V: number of vertices)
+
+[UNION FIND]
+* disjoint set data structure keeps track of set of elements partitioned into number of disjoint subsets.
+* union-find algorithm performs two useful operations on disjoint set data structures:
+   - find: determine which subset particular element is in.
+   - union: join two subsets into single subset.
+* union-find algorithm can be used to check whether undirected graph contains cycle or not.
+
+[KRUSKAL MINIMUM SPANNNG TREE ALGORITHM]
+* spanning tree of connected and undirected graph is subgraph that is tree and connects all vertices together.
+* minimum spanning tree is spanning tree with weight less than or equal to weight of every other spanning tree.
+* weight of aspanning tree is sum of weights given to each edge of spanning tree.
+* minimum spanning tree has (V – 1) edges where V is the number of vertices in the given graph.
+* greedy graph algorithm.
+
