@@ -367,17 +367,17 @@ not yet included in shortest path tree. at every step of algorithm, we find vert
 from source.
 * running time complexity: O(VLogV). (V: number of vertices)
 
-[BELLMAN-FORD ALGORITHM]
+[BELLMAN-FORD SHORTEST PATH ALGORITHM]
 * given graph and source vertex in graph, find shortest paths from source to all vertices in given graph. graph may contain negative weight edges.
 * dynamic graph algorithm.
 * running time complexity: O(VE). (V: number of vertices, E: number of edges)
 
-[FLOYD WARSHALL ALGORITHM]
+[FLOYD WARSHALL SHORTEST PATH ALGORITHM]
 * find shortest distances between every pair of vertices in given edge weighted directed graph.
 * dynamic graph algorithm.
 * running time complexity: O(V^3). (V: number of vertices)
 
-[UNION FIND]
+[UNION FIND ALGORITHM]
 * disjoint set data structure keeps track of set of elements partitioned into number of disjoint subsets.
 * union-find algorithm performs two useful operations on disjoint set data structures:
    - find: determine which subset particular element is in.
@@ -391,3 +391,9 @@ from source.
 * minimum spanning tree has (V – 1) edges where V is the number of vertices in the given graph.
 * greedy graph algorithm.
 
+
+[PRIM MINIMUM SPANNING TREE ALGORITHM]
+* maintain two sets of vertices. first set contains vertices already included in MST, other set contains vertices not yet included. considers all edges that 
+connect two sets, and pick minimum weight edge from these edges.
+* group of edges that connects two set of vertices in graph is called cut. find cut of two sets, pick minimum weight edge from cut and include this vertex to MST set.
+* greedy graph algorithm.

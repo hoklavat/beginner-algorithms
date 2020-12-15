@@ -114,3 +114,4 @@
 42-GraphAlgorithms(FloydWarshall)
 43-GraphAlgorithms(UnionFind)
 44-GraphAlgorithms(Kruksal)
+45-GraphAlgorithms(Prim)
