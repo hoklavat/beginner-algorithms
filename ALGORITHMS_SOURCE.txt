@@ -30,8 +30,8 @@
   - Shell Sort
 * Graph Algorithms
   - Topological Sort
-  - Dijkstra’s Shortest Path Algorithm
-  - Bellman Fords Algorithm
+  - Dijkstra Shortest Path Algorithm
+  - Bellman-Ford Algorithm
   - Floyd Warshalls Algorithm
   - Kruskals Algorithm
   - Prims Algorithm
@@ -107,3 +107,6 @@
 36-DataStructures(PriorityQueue)
 37-DataStructures(AVLTree)
 38-DataStructures(Trie)
+39-GraphAlgorithms(TopologicalSort)
+40-GraphAlgorithms(Dijkstra)
+41-GraphAlgorithms(BellmanFord)

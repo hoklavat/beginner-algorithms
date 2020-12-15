@@ -361,6 +361,13 @@ such that there is no way to start at any vertex v and follow consistently-direc
 
 [DIJKSTRA’s SHORTEST PATH ALGORITHM]
 * given graph and source vertex in graph, find shortest paths from source to all vertices in given graph.
+* greedy graph algorithm.
 * generate SPT (shortest path tree) with given source as root. maintain two sets, one set contains vertices included in shortest path tree, other set includes vertices
 not yet included in shortest path tree. at every step of algorithm, we find vertex which is in other set (set of not yet included) and has minimum distance 
 from source.
+* running time complexity: O(VLogV). (V: number of vertices)
+
+[BELLMAN-FORD ALGORITHM]
+* given graph and source vertex in graph, find shortest paths from source to all vertices in given graph. graph may contain negative weight edges.
+* dynamic graph algorithm.
+* running time complexity: O(VE). (V: number of vertices, E: number of edges)
