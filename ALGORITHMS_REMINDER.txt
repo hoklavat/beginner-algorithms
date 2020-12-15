@@ -371,3 +371,8 @@ from source.
 * given graph and source vertex in graph, find shortest paths from source to all vertices in given graph. graph may contain negative weight edges.
 * dynamic graph algorithm.
 * running time complexity: O(VE). (V: number of vertices, E: number of edges)
+
+[FLOYD WARSHALL ALGORITHM]
+* find shortest distances between every pair of vertices in given edge weighted directed graph.
+* dynamic graph algorithm.
+* running time complexity: O(V^3). (V: number of vertices)
