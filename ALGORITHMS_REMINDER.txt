@@ -391,9 +391,21 @@ from source.
 * minimum spanning tree has (V – 1) edges where V is the number of vertices in the given graph.
 * greedy graph algorithm.
 
-
 [PRIM MINIMUM SPANNING TREE ALGORITHM]
 * maintain two sets of vertices. first set contains vertices already included in MST, other set contains vertices not yet included. considers all edges that 
 connect two sets, and pick minimum weight edge from these edges.
 * group of edges that connects two set of vertices in graph is called cut. find cut of two sets, pick minimum weight edge from cut and include this vertex to MST set.
 * greedy graph algorithm.
+
+[GREEDY ALGORITHM]
+* algorithmic paradigm that builds up solution piece by piece, always choosing next piece that offers most obvious and immediate benefit. 
+* greedy algorithms are used for optimization problems. 
+* optimization problem can be solved using greedy if problem has following property: at every step, choice that looks best at moment can be made and optimal solution
+ of complete problem can be gotten.
+* common algorithms: Kruskal Minimum Spanning Tree, Prim Minimum Spanning Tree, Dijkstra Shortest Pat, Huffman Coding.
+
+[ACTIVITY SELECTION PROBLEM]
+* n activities are given with their start and finish times. Select maximum number of activities that can be performed by single person, assuming that person can only
+ work on single activity at time.
+* greedy choice is to always pick next activity whose finish time is least among remaining activities and start time is more than or equal to finish time of previously
+ selected activity.
