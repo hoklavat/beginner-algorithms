@@ -409,3 +409,16 @@ connect two sets, and pick minimum weight edge from these edges.
  work on single activity at time.
 * greedy choice is to always pick next activity whose finish time is least among remaining activities and start time is more than or equal to finish time of previously
  selected activity.
+* greedy algorithm.
+
+[COIN CHANGE PROBLEM]
+* find minimum number of coins needed to make change when there is infinite supply for each of denominations.
+* take coins with greater value first, reduces total number of coins needed. start from largest possible denomination and keep adding denominations while remaining 
+value is greater than 0.
+* greedy algorithm.
+
+[FRACTIONAL KNAPSACK PROBLEM]
+* given weights and values of n items, we need to put these items in knapsack of capacity W to get maximum total value in knapsack. in 0-1 knapsack problem it is not
+ allowed to break items. in fractional knapsack items can be broke down for maximizing total value of knapsack.
+* calculate ratio value/weight for each item and sort item on basis of this ratio. then take item with highest ratio and add them until next item cannot be added as
+ whole and at end add next item as much as we can. 
