@@ -123,3 +123,4 @@
 49-DivideConquerAlgorithms(Maximum)
 50-DivideConquerAlgorithms(NumberOfWays)
 51-DivideConquerAlgorithms(HouseOfThief)
+52-DivideConquerAlgorithms(StringConversion)

@@ -437,3 +437,8 @@ value is greater than 0.
  houses because owner of stolen houses will tell his two neighbours left and right side. what is the maximum stolen value?
 * solution is to find maximum sum subsequence where no two selected elements are adjacent.
 * if element is selected then next element cannot be selected. if element is not selected then next element can be selected.
+
+[STRING CONVERSION]
+* convert one string to another by deleting, inserting and replacing characters. find minimum number of edit operations.
+* divide and conquer algorithm.
+
