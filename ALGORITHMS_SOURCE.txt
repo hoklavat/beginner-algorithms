@@ -41,13 +41,15 @@
   - Coin Change Problem
   - Fractional Knapsack Problem
 * Divide&Conquer Algorithms
+  - Maximum
   - Fibonacci
-  - Number Factors
+  - Number of Ways
   - House Thief Problem
   - String Conversion
   - Zero-One Knapsack
   - Longest Common Subsequence
   - Longest Palindromic Subsequence
+  - Minimun Cost to Reach End
 
 [INDEPENDENT DATA STRUCTURES]
 * Array
@@ -117,3 +119,7 @@
 45-GraphAlgorithms(Prim)
 46-GreedyAlgorithms(ActivitySelection)
 47-GreedyAlgorithms(CoinChange)
+48-GreedyAlgorithms(FractionalKnapsack)
+49-DivideConquerAlgorithms(Maximum)
+50-DivideConquerAlgorithms(NumberOfWays)
+51-DivideConquerAlgorithms(HouseOfThief)

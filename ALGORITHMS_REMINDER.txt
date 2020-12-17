@@ -402,7 +402,7 @@ connect two sets, and pick minimum weight edge from these edges.
 * greedy algorithms are used for optimization problems. 
 * optimization problem can be solved using greedy if problem has following property: at every step, choice that looks best at moment can be made and optimal solution
  of complete problem can be gotten.
-* common algorithms: Kruskal Minimum Spanning Tree, Prim Minimum Spanning Tree, Dijkstra Shortest Pat, Huffman Coding.
+* examples: Kruskal Minimum Spanning Tree, Prim Minimum Spanning Tree, Dijkstra Shortest Pat, Huffman Coding.
 
 [ACTIVITY SELECTION PROBLEM]
 * n activities are given with their start and finish times. Select maximum number of activities that can be performed by single person, assuming that person can only
@@ -418,7 +418,22 @@ value is greater than 0.
 * greedy algorithm.
 
 [FRACTIONAL KNAPSACK PROBLEM]
-* given weights and values of n items, we need to put these items in knapsack of capacity W to get maximum total value in knapsack. in 0-1 knapsack problem it is not
- allowed to break items. in fractional knapsack items can be broke down for maximizing total value of knapsack.
+* given weights and values of n items, put these items in knapsack of capacity W to get maximum total value in knapsack. in 0-1 knapsack problem it is not allowed to
+ break items. in fractional knapsack items can be broke down for maximizing total value of knapsack.
 * calculate ratio value/weight for each item and sort item on basis of this ratio. then take item with highest ratio and add them until next item cannot be added as
  whole and at end add next item as much as we can. 
+
+[DIVIDE AND CONQUER ALGORITHM]
+* divide: break given problem into subproblems of same type. 
+* conquer: recursively solve these subproblems. 
+* combine: appropriately combine the answers.
+* examples: binary search, quick sort, merge sort, closest pair of points, strassen's algorithm, cooley-tukey fast fourier transform, karatsuba algorithm, ...
+
+[NUMBER OF WAYS ALGORITHM]
+* find number of different ways to express number as sum of specific numbers.
+
+[HOUSE OF THIEF ALGORITHM]
+* there are n houses build in line, each of which contains some value in it. thief is going to steal maximal value of these houses, but he can’t steal in two adjacent
+ houses because owner of stolen houses will tell his two neighbours left and right side. what is the maximum stolen value?
+* solution is to find maximum sum subsequence where no two selected elements are adjacent.
+* if element is selected then next element cannot be selected. if element is not selected then next element can be selected.
