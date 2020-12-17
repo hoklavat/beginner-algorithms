@@ -1,7 +1,6 @@
 //52-DivideConquerAlgorithms(StringConversion)
 
 #include <iostream>
-#include <string>
 using namespace std;
 
 int findMinOperationsAux(string s1, string s2, int i1, int i2){
