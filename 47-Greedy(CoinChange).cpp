@@ -1,4 +1,4 @@
-//47-GreedyAlgorithms(CoinChange)
+//47-Greedy(CoinChange)
 
 #include <iostream>
 #include <algorithm>

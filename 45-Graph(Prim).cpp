@@ -1,4 +1,4 @@
-//45-GraphAlgorithms(Prim)
+//45-Graph(Prim)
 //Greedy/Graph Minimum Spanning Tree Finder.
 
 #include <iostream>

@@ -1,4 +1,4 @@
-//52-DivideConquerAlgorithms(StringConversion)
+//52-DivideConquer(StringConversion)
 
 #include <iostream>
 using namespace std;

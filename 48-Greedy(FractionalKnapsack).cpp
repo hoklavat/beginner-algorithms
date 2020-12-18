@@ -1,4 +1,4 @@
-//48-GreedyAlgorithms(FractionalKnapsack)
+//48-Greedy(FractionalKnapsack)
 
 #include <iostream>
 #include <algorithm>

@@ -442,3 +442,17 @@ value is greater than 0.
 * convert one string to another by deleting, inserting and replacing characters. find minimum number of edit operations.
 * divide and conquer algorithm.
 
+[LONGEST COMMON SUBSEQUENCE]
+* given two strings, find longest subsequence which is common in both strings.
+
+[LONGEST PALINDROMIC SUBSEQUENCE]
+* find longest palindromic subsequence in given string.
+* subsequence is sequence that can be derived from another string by deleting some or no elements without changing order of remaining elements.
+* palindrom is string that reads same backward as well as forward. 
+
+[LONGEST PALINDROMIC SUBSTRING]
+* find longest palindromic substring in given string.
+* substring is contiguous sequence of characters within string.
+
+[MINIMUM COST TO REACH END]
+*

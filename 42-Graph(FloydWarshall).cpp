@@ -1,4 +1,4 @@
-//42-GraphAlgorithms(FloydWarshall)
+//42-Graph(FloydWarshall)
 //Dynamic/Graph Shortest Path Algorithm
 
 #include <iostream>

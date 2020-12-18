@@ -1,4 +1,4 @@
-//53-DivideConquerAlgorithms(ZeroOneKnapsack)
+//53-DivideConquer(ZeroOneKnapsack)
 
 #include <iostream>
 using namespace std;

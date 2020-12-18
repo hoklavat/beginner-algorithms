@@ -1,4 +1,4 @@
-//41-GraphAlgorithms(BellmanFord)
+//41-Graph(BellmanFord)
 //Dynamic/Graph Shortest Path Algorithm
 
 #include <iostream>

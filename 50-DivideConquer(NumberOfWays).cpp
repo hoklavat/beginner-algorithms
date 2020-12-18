@@ -1,4 +1,4 @@
-//50-DivideConquerAlgorithms(NumberOfWays)
+//50-DivideConquer(NumberOfWays)
 //number of different ways to express number as sum of 1, 3 and 4.
 
 #include <iostream>

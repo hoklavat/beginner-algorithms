@@ -49,6 +49,7 @@
   - Zero-One Knapsack
   - Longest Common Subsequence
   - Longest Palindromic Subsequence
+  - Longest Palindromic Substring
   - Minimun Cost to Reach End
 
 [INDEPENDENT DATA STRUCTURES]
@@ -125,3 +126,6 @@
 51-DivideConquer(HouseOfThief)
 52-DivideConquer(StringConversion)
 53-DivideConquer(ZeroOneKnapsack)
+54-DivideConquer(LongestCommonSubsequence)
+55-DivideConquer(LongestPalindromicSubsequence)
+56-DivideConquer(LongestPalindromicSubstring)

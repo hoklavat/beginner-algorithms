@@ -1,4 +1,4 @@
-//46-GreedyAlgorithms(ActivitySelection)
+//46-Greedy(ActivitySelection)
 
 #include<iostream>
 using namespace std;

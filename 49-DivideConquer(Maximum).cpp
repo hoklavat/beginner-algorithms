@@ -1,4 +1,4 @@
-//49-DivideConquerAlgorithms(Maximum)
+//49-DivideConquer(Maximum)
 
 #include <iostream>
 using namespace std;

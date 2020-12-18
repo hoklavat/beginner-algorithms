@@ -1,4 +1,4 @@
-//51-DivideConquerAlgorithms(HouseOfThief)
+//51-DivideConquer(HouseOfThief)
 
 #include <iostream>
 using namespace std;

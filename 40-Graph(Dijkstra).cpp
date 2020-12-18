@@ -1,4 +1,4 @@
-//40-GraphAlgorithms(Dijkstra)
+//40-Graph(Dijkstra)
 //Greedy/Graph Shortest Path Algorithm
 
 #include <iostream>

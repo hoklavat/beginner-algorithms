@@ -1,4 +1,4 @@
-//43-GraphAlgorithms(UnionFind)
+//43-Graph(UnionFind)
 //used to detect cycle in graph.
 
 #include <iostream>
