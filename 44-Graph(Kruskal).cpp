@@ -1,4 +1,4 @@
-//44-Graph(Kruksal)
+//44-Graph(Kruskal)
 //Greedy/Graph Minimum Spanning Tree Finder.
 
 #include <iostream>

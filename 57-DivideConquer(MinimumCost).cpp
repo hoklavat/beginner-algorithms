@@ -7,13 +7,11 @@ using namespace std;
 
 int minCost(int cost[5][5], int row, int col){
 	if(row == -1 || col == -1) return INT_MAX;
-	if(row == 0 && col == 0) return cost[0][0];
-	
+	if(row == 0 && col == 0) return cost[0][0];	
 	int mcUp = minCost(cost, row-1, col);
 	int mcLeft = minCost(cost, row, col-1);
 	int mc = min(mcUp, mcLeft);	
-	int cellCost = cost[row][col];
-	
+	int cellCost = cost[row][col];	
 	return mc+cellCost;	
 }
 

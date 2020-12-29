@@ -34,7 +34,7 @@
   - Bellman-Ford Algorithm
   - Floyd Warshalls Algorithm
   - Union Find
-  - Kruskals Algorithm
+  - Kruksals Algorithm
   - Prims Algorithm
 * Greedy Algorithms
   - Activity Selection Problem
@@ -117,7 +117,7 @@
 41-Graph(BellmanFord)
 42-Graph(FloydWarshall)
 43-Graph(UnionFind)
-44-Graph(Kruksal)
+44-Graph(Kruskal)
 45-Graph(Prim)
 46-Greedy(ActivitySelection)
 47-Greedy(CoinChange)

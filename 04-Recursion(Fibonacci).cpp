@@ -1,4 +1,6 @@
 //04-Recursion(Fibonacci)
+//F(n)=F(n-1)+F(n-2) where F(0)=0 and F(1)=1. F(n) is nth fibonacci number.
+//0, 1, (0+1), (1+1), (1+2), (2+3), (3+5), ...
 
 #include <iostream>
 using namespace std;
@@ -7,9 +9,9 @@ using namespace std;
 int Fibonacci_Head(int n){
 	if(n == 0) return 0;
 	if(n == 1) return 1;
-	int fib1 = Fibonacci_Head(n-1);
-	int fib2 = Fibonacci_Head(n-2);
-	return fib1+fib2;
+	int fib1 = Fibonacci_Head(n-1); //n=2 -> 1.
+	int fib2 = Fibonacci_Head(n-2); //n=2 -> 0.
+	return fib1+fib2; //n=2 -> 1+0=1.
 }
 
 //Tail Recursion

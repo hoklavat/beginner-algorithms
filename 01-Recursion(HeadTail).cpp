@@ -1,4 +1,6 @@
 //01-Recursion(Head/Tail)
+//head recursion: function calls itself at beginning. stack overflow risk.
+//tail recursion: function calls itself at end. no stack overflow risk.
 
 #include <iostream>
 using namespace std;

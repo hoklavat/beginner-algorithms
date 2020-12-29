@@ -1,4 +1,5 @@
 //02-Recursion(Sum)
+//sum of integers from 1 to n. 1+2+3+...+n.
 
 #include <iostream>
 using namespace std;

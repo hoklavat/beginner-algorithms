@@ -1,88 +1,49 @@
-//07-Backtracking(GraphColoring)
-//graph is an nxn matrice that represents adjacency of vertices where n is the number of vertices.
-//value of graph[i][j] is 1 if there is a direct edge from i to j (i and j are adjacent), otherwise 0.
-//m is maximum number of colors that can be used.
-//using m colors, color vertices of a graph such that no two adjacent vertices share the same color.
+//08-Backtracking(GraphColoring)
+//coloring vertices of graph such that no adjacent vertices share same color.
 
 #include <iostream>
-#include <vector>
 using namespace std;
 
-class GraphColoring{
-private:
-	int numOfColors;
-	vector<int> colors;	
-	vector<vector<int>> graphMatrix;
-	
-	bool isColorValid(size_t nodeIndex, size_t colorIndex); //size_t = unsigned int
-	bool solve(size_t nodeIndex);	
-	void showResult();
-	
-public:
-	GraphColoring(const vector<vector<int>> &graph, int _numOfColors);
-	void operator()();
-};
+#define V 4 //number of vertices.
 
-GraphColoring::GraphColoring(const vector<vector<int>> &graph, int _numOfColors): graphMatrix(graph), numOfColors(_numOfColors){
-	colors.resize(graphMatrix.size());
+void print(int C[]){
+	cout << "Solution Exists:" << endl;
+	for(int i = 0; i < V; i++) cout << C[i] << " ";
+	cout << endl;
 }
 
-//if any adjacent vertice of input vertice(nodeIndex) have same color denoted by colorIndex return false.
-bool GraphColoring::isColorValid(size_t nodeIndex, size_t colorIndex){
-	for(size_t i = 0; i < graphMatrix.size(); i++){
-		if(graphMatrix[nodeIndex][i] == 1 && colorIndex == colors[i]) //if adjacent vertices have same color return false.
-			return false;
-	}
+bool isSafe(bool G[V][V], int C[], int v, int c){
+	for(int i = 0; i < V; i++)
+		if(G[v][i] && c == C[i]) return false; //adjacent vertice has same color.
 	return true;
 }
 
-//color input vertice with colorIndex if any adjacent vertice of this vertice doesn't already colored with the same color.
-bool GraphColoring::solve(size_t nodeIndex){
-	//recursion base case.
-	if(nodeIndex == graphMatrix.size())
-		return true;
-		
-	for(int colorIndex = 1; colorIndex <= numOfColors; colorIndex++){
-		if(isColorValid(nodeIndex, colorIndex)){ //if false at any recursion therere is no solution.
-			colors[nodeIndex] = colorIndex; 
-			if(solve(nodeIndex + 1))
-				return true;
+bool coloring(bool G[V][V], int C[], int v, int m){
+	if(v == V) return true;
+	for(int c = 1; c <= m; c++){
+		if(isSafe(G, C, v, c)){
+			C[v] = c;
+			if(coloring(G, C, v+1, m)) return true;
+			C[v] = 0;
 		}
-	}
-	
+	}	
 	return false;
 }
 
-void GraphColoring::operator()(){
-	if(solve(0)){
-		showResult();
-	}
-	else{
-		cout << "No solution with the given parameters...\n";
-	}
-}
-
-void GraphColoring::showResult(){
-	for(size_t i = 0; i < graphMatrix.size(); i++)
-		cout << "Node " << (i + 1) << " has color index: " << colors[i] << "\n";
-	cout << "\n";
-}
-
 int main(){
-	//matrix represents five nodes A, B, C, D, E and which of them are adjacent to each other.
-	//for example A is adjacent with B and D.
-	const vector<vector<int>> graphMatrix = {
-		//A  B  C  D  E
-		{ 0, 1, 0, 1, 0 }, //A
-		{ 1, 0, 1, 1, 0 }, //B
-		{ 0, 1, 0, 1, 0 }, //C
-		{ 1, 1, 1, 0, 1 }, //D
-		{ 0, 0, 0, 1, 0 }, //E
-	};
+	bool G[V][V] ={
+		{0, 1, 1, 1},
+		{1, 0, 1, 0},
+		{1, 1, 0, 1},
+		{1, 0, 1, 0},
+	};//graph with 4 vertices.
+	int C[V]; //colors of vertices.
+	int m = 3; //number of colors.	
 	
-	constexpr int numOfColors = 3;
-	GraphColoring graphColoring(graphMatrix, numOfColors);
-	graphColoring();
-	
+	for(int i = 0; i < V; i++) C[i] = 0;
+
+	if(coloring(G, C, 0, m) == false) cout << "Solution does not exist" << endl;
+	else print(C);
+
 	return 0;
 }

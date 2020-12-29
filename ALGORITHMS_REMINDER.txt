@@ -47,13 +47,15 @@
 * running time complexity: O(logn). (n: number of elements)
 
 [HANOI TOWERS]
-* there are three rods and many disks. all disks are placed on rod as smaller is on larger. establish same settlement on last rod by moving uppermost disk 
-on first two rods and only one disk can be moved at time.
+* there are three rods and many disks with different sizes. all disks are placed on rod as smaller is on larger. 
+establish same settlement on last rod by moving uppermost disk on first two rods and only one disk can be moved at time.
+* minimal number of moves required to solve a Tower of Hanoi puzzle is 2n-1, where n is the number of disks
 * running time complexity: O(2^n). (n: number of disks)
 
 [BACKTRACKING]
 * build possible canditates to solution incrementally. abandon invalid canditates and then backtrack. it creates solution tree.
-* it is much faster than brute-force which tests all possible solutions.
+* trying every possible configuration and each configuration is tried only once.
+* it is much faster than brute-force method which tests all possible solutions.
 * applications: n-queen's, vertex coloring, sudoku, knight's tour, np-complete, np-hard, constraint satisfaction, combinatorial optimization, 
 depth-first search, meta-heuristics, ...
 * meta-heuristics: approximate solutions to np problems. ant-colony optimization, genetic algorithms, simulated annealing ...
@@ -69,6 +71,7 @@ depth-first search, meta-heuristics, ...
 register allocation, map coloring ...
 
 [KNIGHT's TOUR PROBLEM]
+* given a n*n board with knight placed on first block of empty board. moving according to rules of chess knight must visit each square exactly once.
 * can knight visit every square on chessboard exactly once? (hamiltonian-path problem)
 * closed knight's tour: beginning and ending squares are same. (hamiltonian-cycle problem)
 * schwenk theorem: for mxn chessboard closed knight tour problem is always feasible, unless (m and n are both odds) or (m = 1/2/4) or (m = 3 and n = 4/6/8).
@@ -384,7 +387,7 @@ from source.
    - union: join two subsets into single subset.
 * union-find algorithm can be used to check whether undirected graph contains cycle or not.
 
-[KRUSKAL MINIMUM SPANNNG TREE ALGORITHM]
+[KRUKSAL MINIMUM SPANNNG TREE ALGORITHM]
 * spanning tree of connected and undirected graph is subgraph that is tree and connects all vertices together.
 * minimum spanning tree is spanning tree with weight less than or equal to weight of every other spanning tree.
 * weight of aspanning tree is sum of weights given to each edge of spanning tree.
