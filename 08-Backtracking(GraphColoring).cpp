@@ -36,7 +36,7 @@ int main(){
 		{1, 0, 1, 0},
 		{1, 1, 0, 1},
 		{1, 0, 1, 0},
-	};//graph with 4 vertices.
+	}; //graph with 4 vertices. if vertices are connected corresponding element is 1.
 	int C[V]; //colors of vertices.
 	int m = 3; //number of colors.	
 	

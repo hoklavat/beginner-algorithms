@@ -1,5 +1,5 @@
 //05-Recursion(BinarySearch)
-//sorted array divided in half. search left part if smaller, right part if greater than middle.
+//sorted array divided in halves. if searched one is smaller than middle search left part, if greater search right part.
 
 #include <iostream>
 using namespace std;

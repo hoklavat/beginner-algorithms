@@ -36,7 +36,7 @@ bool solve(int B[N][N], int col){
 		if(isSafe(B, i, col)){
 			B[i][col] = 1;
 			if(solve(B, col + 1)) return true;
-			B[i][col] = 0; // BACKTRACK
+			B[i][col] = 0; //backtrack
 		}	
 	}
 	return false;

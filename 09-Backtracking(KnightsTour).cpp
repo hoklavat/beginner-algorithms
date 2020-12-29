@@ -5,7 +5,7 @@
 #include <iomanip>
 using namespace std;
 
-#define N 8 //size of board.
+#define N 8 //NxN chess board.
 
 void print(int S[N][N]){
 	for(int x = 0; x < N; x++){

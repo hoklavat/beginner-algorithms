@@ -1,6 +1,6 @@
 //04-Recursion(Fibonacci)
-//F(n)=F(n-1)+F(n-2) where F(0)=0 and F(1)=1. F(n) is nth fibonacci number.
-//0, 1, (0+1), (1+1), (1+2), (2+3), (3+5), ...
+//fibonacci number is sum of previous two fibonacci numbers assuming that F(0)=0 and F(1)=1 where F(n) is nth fibonacci number.
+//F(n)=F(n-1)+F(n-2). 0, 1, (0+1), (1+1), (1+2), (2+3), (3+5), ...
 
 #include <iostream>
 using namespace std;

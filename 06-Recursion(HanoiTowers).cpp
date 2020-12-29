@@ -1,5 +1,5 @@
 //06-Recursion(HanoiTowers)
-//three rods, many disks with different sizes. smaller disk should always be placed on larger. 
+//three rods, many disks with different sizes. smaller disk should always be located on larger ones. 
 //establish same settlement on last rod by moving uppermost disk on any rod.
 
 #include <iostream>
