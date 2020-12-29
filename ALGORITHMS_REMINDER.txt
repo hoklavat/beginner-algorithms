@@ -455,4 +455,11 @@ value is greater than 0.
 * substring is contiguous sequence of characters within string.
 
 [MINIMUM COST TO REACH END]
-*
+* two dimensional matrix is given. accessing each cell have cost associated with it. started from (0, 0) go till (n-1, n-1) cell.
+* only movement to right or down cell from current cell is possible.
+* find minimum cost to reach end.
+
+[NUMBER OF PATHS TO REACH END]
+* two dimensional matrix is given. accessing each cell have cost associated with it. started from (0, 0) go till (n-1, n-1) cell.
+* only movement to right or down cell from current cell is possible.
+* find number of ways to reach end, by not exceeding total cost limit.

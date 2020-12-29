@@ -51,6 +51,7 @@
   - Longest Palindromic Subsequence
   - Longest Palindromic Substring
   - Minimun Cost to Reach End
+  - Number of Paths to Reach End
 
 [INDEPENDENT DATA STRUCTURES]
 * Array
@@ -129,3 +130,5 @@
 54-DivideConquer(LongestCommonSubsequence)
 55-DivideConquer(LongestPalindromicSubsequence)
 56-DivideConquer(LongestPalindromicSubstring)
+57-DivideConquer(MinimumCost)
+58-DivideConquer(NumberOfPaths)
