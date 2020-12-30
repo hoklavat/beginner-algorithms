@@ -19,7 +19,7 @@ void countSort(char a[]){
 		count[i] += count[i-1];
 
 	for(i = 0; a[i]; i++){ //when a[i] not null.
-		output[count[a[i]] - 1] = a[i];
+		output[count[a[i]]-1] = a[i];
 		count[a[i]]--;
 	}
 

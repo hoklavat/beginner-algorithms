@@ -47,17 +47,18 @@
 * running time complexity: O(logn). (n: number of elements)
 
 [HANOI TOWERS]
-* there are three rods and many disks with different sizes. all disks are placed on rod as smaller is on larger. 
-establish same settlement on last rod by moving uppermost disk on first two rods and only one disk can be moved at time.
-* minimal number of moves required to solve a Tower of Hanoi puzzle is 2n-1, where n is the number of disks
+* there are three rods and many disks with different sizes. smaller disk is located on larger disk. 
+* establish same settlement on last rod by moving uppermost disk on first two rods. only one disk can be moved at time.
+* minimal number of moves required to solve a Tower of Hanoi puzzle is 2^n - 1, where n is number of disks.
 * running time complexity: O(2^n). (n: number of disks)
 
 [BACKTRACKING]
-* build possible canditates to solution incrementally. abandon invalid canditates and then backtrack. it creates solution tree.
+* build possible canditates to solution incrementally. abandon invalid canditates then backtrack. 
 * trying every possible configuration and each configuration is tried only once.
+* solution tree is created.
 * it is much faster than brute-force method which tests all possible solutions.
-* applications: n-queen's, vertex coloring, sudoku, knight's tour, np-complete, np-hard, constraint satisfaction, combinatorial optimization, 
-depth-first search, meta-heuristics, ...
+* applications: n-queen's, vertex coloring, sudoku, knight's tour, np-complete, np-hard, constraint satisfaction, combinatorial optimization, depth-first search,
+ meta-heuristics, ...
 * meta-heuristics: approximate solutions to np problems. ant-colony optimization, genetic algorithms, simulated annealing ...
 * running time complexity: O(2^n). (n: number of elements)
 
@@ -65,15 +66,16 @@ depth-first search, meta-heuristics, ...
 * place n queens on nxn chess board such that no queen threatens any other.
 
 [VERTEX COLORING PROBLEM]
-* color vertices of graph such that no two adjacent vertices share same color. chromatic number is smallest number of colors needed.
+* color vertices of graph such that no two adjacent vertices share same color.
+* chromatic number is minimum number of colors required.
 * there may be more than one solution.
-* applications: np-complete problem, four-color theorem, power-welsh algorithm, bipartite graph, making schedule, radio frequency assignment, 
-register allocation, map coloring ...
+* applications: np-complete problem, four-color theorem, power-welsh algorithm, bipartite graph, making schedule, radio frequency assignment, register allocation,
+ map coloring ...
 
 [KNIGHT's TOUR PROBLEM]
-* given a n*n board with knight placed on first block of empty board. moving according to rules of chess knight must visit each square exactly once.
-* can knight visit every square on chessboard exactly once? (hamiltonian-path problem)
-* closed knight's tour: beginning and ending squares are same. (hamiltonian-cycle problem)
+* given nxn chess board with knight placed on first square of empty board. chess knight must visit each square exactly once without violating chess rules.
+* knight visits every square on chessboard exactly once. (hamiltonian-path problem)
+* beginning and ending squares are same. (hamiltonian-cycle problem, closed knight's tour)
 * schwenk theorem: for mxn chessboard closed knight tour problem is always feasible, unless (m and n are both odds) or (m = 1/2/4) or (m = 3 and n = 4/6/8).
 
 [DYNAMIC PROGRAMMING]
@@ -126,12 +128,12 @@ register allocation, map coloring ...
 
 [MERGE SORT]
 * divide and conquer algorithm.
-* divide input array into two half, recursively call self for two half, merge two sorted half.
+* divide input array into two halves, recursively call self for two halves, then merge two sorted halves.
 * time complexity: O(nlogn).
 
 [QUICK SORT]
 * divide and conquer algorithm.
-* pick element(first, last, median or random) as pivot and partition given array around picked pivot. 
+* pick element(first, last, median or random) as pivot, then partition given array around picked pivot. 
 * worst running time complexity: O(n^2).
 * best running time complexity: O(nlogn).
 

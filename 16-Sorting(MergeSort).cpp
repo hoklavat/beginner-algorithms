@@ -4,17 +4,17 @@
 using namespace std;
 
 void merge(int a[], int l, int m, int r){ //left, middle, right indexes.
-	int n1 = m - l + 1; //count for left part.
-	int n2 = r - m; //count for right part.
+	int n1 = m-l+1; //count for left part.
+	int n2 = r-m; //count for right part.
 	int L[n1], R[n2]; //left array, right array.
 	
 	//copy left part.
 	for(int i = 0; i < n1; i++)
-		L[i] = a[l + i];
+		L[i] = a[l+i];
 	
 	//copy right part.
 	for(int j = 0; j < n2; j++)
-		R[j] = a[m + 1 + j];
+		R[j] = a[m+1+j];
 	
 	//merge parts while sorting.
 	int i = 0;
@@ -46,8 +46,7 @@ void merge(int a[], int l, int m, int r){ //left, middle, right indexes.
 }
 
 void mergeSort(int a[], int l, int r){
-	if(l >= r) return; //base case of recursion.
-	
+	if(l >= r) return; //base case of recursion.	
 	int m = (l+r-1)/2; //middle index.
 	mergeSort(a, l, m); //divide left part first.
 	mergeSort(a, m+1, r);

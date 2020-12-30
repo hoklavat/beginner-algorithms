@@ -1,5 +1,5 @@
 //06-Backtracking(N-Queens)
-//place N queens on an NxN chess B so that no queen threatens any other.
+//place N queens on an NxN chess board so that no queen threatens any other.
 
 #include <iostream>
 using namespace std;

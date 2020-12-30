@@ -7,8 +7,8 @@ using namespace std;
 #define V 4 //number of vertices.
 
 void print(int C[]){
-	cout << "Solution Exists:" << endl;
-	for(int i = 0; i < V; i++) cout << C[i] << " ";
+	cout << "Solution exists. Selected colors for corresponding vertices are;" << endl;
+	for(int i = 0; i < V; i++) cout << i << ":" << C[i] << " ";
 	cout << endl;
 }
 

@@ -14,12 +14,12 @@ public:
 	TwoDimensionArray(): TwoDimensionArray(5, 5){}
 
 	TwoDimensionArray(int rows, int columns){
-		this->data = new int[rows * columns];
+		this->data = new int[rows*columns];
 		this->rows = rows;
 		this->columns = columns;
 		for(int r = 0; r < rows; r++){
 			for(int c = 0; c < columns; c++){
-				*(data + r*rows + c) = INT_MIN;
+				*(data+r*rows+c) = INT_MIN;
 			}
 		}
 	}
@@ -31,7 +31,7 @@ public:
 	void Traverse(){
 		for(int r = 0; r < rows; r++){
 			for(int c = 0; c < columns; c++){
-				cout << r << ":" << c << "(" << *(data + r*rows + c) << "), ";
+				cout << r << ":" << c << "(" << *(data+r*rows+c) << "), ";
 			}
 			cout << endl;
 		}
@@ -39,18 +39,18 @@ public:
 	}
 	
 	void Insert(int r, int c, int value){
-		if(*(data + r*rows + c) == INT_MIN) *(data + r*rows + c) = value;
+		if(*(data+r*rows+c) == INT_MIN) *(data+r*rows+c) = value;
 	}
 	
 	int GetValue(int r, int c){
-		return *(data + r*rows + c);
+		return *(data+r*rows+c);
 	}
 	
 	int* Search(int value){
 		int *loc = new int[2];;
 		for(int r = 0; r < rows; r++){
 			for(int c = 0; c < columns; c++){
-				if(*(data + r*rows + c) == value) {
+				if(*(data+r*rows+c) == value) {
 					loc[0] = r;
 					loc[1] = c;
 					return loc;
@@ -62,9 +62,8 @@ public:
 		return loc;
 	}
 	
-	void Delete(int r, int c)
-	{
-		if(*(data + r*rows + c) != INT_MIN) *(data + r*rows + c) = INT_MIN;
+	void Delete(int r, int c){
+		if(*(data+r*rows+c) != INT_MIN) *(data+r*rows+c) = INT_MIN;
 	}
 
 };
