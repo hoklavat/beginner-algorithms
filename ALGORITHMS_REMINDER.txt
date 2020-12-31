@@ -1,19 +1,31 @@
 *** ALGORITHMS AND DATA STRUCTURES ***
 
 [RUN TIME ANALYSIS]
-- worst/best/average case run time.
-- notations:
-   - omega: minimum required time. lowerbound. no less than given time. best case.
-   - big-o: maximum required time. upperbound. no more than given time. worst case.
-   - theta: between upperbound and lowerbound. on average to given time. average case.
-- common types of running time complexities for big-o:
-   - O(1): constant.
-   - O(logn): logarithmic.
-   - O(n): linear.
+* asymptotic analysis: how time or space taken by algorithm increases with input size n.
+* worst/best/average case run time.
+* asymptotic notations:
+   - omega: minimum required time. lowerbound. no less than given time. best case. o().
+   - big-o: maximum required time. upperbound. no more than given time. worst case. O().
+   - theta: between upperbound and lowerbound. on average to given time. average case. T().
+* common types of running time complexities for big-o:
+   - O(1): constant. none loop.
+   - O(logn): logarithmic. loop variable is divided/multiplied by constant.
+   - O(loglogn): loop variable is decreased/increased exponentially by constant.
+   - O(n): linear. constant loop.
+   - O(m+n): consecutive loops.
    - O(nlogn): linear logarithmic.
+   - O(n^x): inner loops.
    - O(n^2): quadratic.
    - O(n^3): cubic.
    - O(2^n): exponential.
+* constant multiplication: if f(n) is O(g(n)) then a*f(n) is also O(g(n)). 
+* transitive propoerty: if f(n) is O(g(n)) and g(n) is O(h(n)) then f(n) = O(h(n)). 
+* reflexive property: If f(n) is given then f(n) is O(f(n)).
+* symmetry: if f(n) is T(g(n)) then g(n) is T(f(n)). only valid for theta.
+* transpose symmetry: if f(n) is O(g(n)) then g(n) is O(f(n)). only valid for big-o and omega.
+* if f(n)=O(g(n)) and f(n)=o(g(n)) then f(n)=T(g(n)).
+* if f(n)=O(g(n)) and d(n)=O(e(n)) then f(n)+d(n)=O(max(g(n),e(n))).
+* if f(n)=O(g(n)) and d(n)=O(e(n)) then f(n)*d(n)=O(g(n)*e(n)). 
 
 [RECURSION]
 * recursive function: function calls itself until base case is reached.
