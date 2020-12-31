@@ -73,7 +73,7 @@ void find(contact C[], int n){
 
 int main(){
 	contact C[] = { 
-		{"Ahmet", "ahmet@gmail.com", "gaurav@gfgQA.com"},
+		{"Ahmet", "ahmet@gmail.com", "725478"},
 		{"Burhan", "cevat@gmail.com", "+864210"},
 		{"Cevat", "+123456", "cevat@skype.com"},
 		{"Davut", "+123456", "ahmet@gmail.com"},
