@@ -132,3 +132,7 @@
 56-DivideConquer(LongestPalindromicSubstring)
 57-DivideConquer(MinimumCost)
 58-DivideConquer(NumberOfPaths)
+
+[OTHERS]
+Graph(FindSameContacts)
+Search(FindMinimumUnsorted)
