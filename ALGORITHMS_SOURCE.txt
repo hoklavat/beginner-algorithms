@@ -136,3 +136,4 @@
 [OTHERS]
 Graph(FindSameContacts)
 Search(FindMinimumUnsorted)
+Connectivity(EulerianPath)
