@@ -324,11 +324,14 @@ elements. insert/remove by pos takes much time because of shifting.
 * applications: index generation, crypthography, file comparision, password verification, blockchain, ...
 
 [GRAPH]
-* non-linear data structure consisting of nodes (vertices) and edges which connect nodes with each other.
-* mathematical structures to model pairwise relations between given objects.
-* G(V, E): graph = vertice + edge
+* non-linear data structure consisting of nodes and edges which connect nodes with each other.
 * types: directed, undirected
-* representation models: adjaceny matrixes, edge list representation
+* node = vertice.
+* edge represents connection between two nodes. 
+* adjacency matrix (nx) or edge list(n) represents which nodes are connected to each other. n is number of vertices.
+* adjacency matrix for undirected graph is symmetrical.
+* for directed graph (u, v) is not same as (v, u) where v and u are nodes.
+* mathematical structures to model pairwise relations between given objects.
 * adjacency matrix
    - A(i, j) = 1 (nodes i, j are directly connected)
    - A(i, j) = 0 (nodes i, j are not directly connected)
