@@ -91,8 +91,12 @@
 * schwenk theorem: for mxn chessboard closed knight tour problem is always feasible, unless (m and n are both odds) or (m = 1/2/4) or (m = 3 and n = 4/6/8).
 
 [DYNAMIC PROGRAMMING]
-* dynamic programming: divide complex problems into simpler sub-programs then overlap sub-problems. 
-* running time complexity: O(n).
+* dynamic programming: divide complex problems into simpler sub-programs then overlap sub-problems.
+* two main properties of problem that suggests that given problem can be solved using dynamic programming are overlapping subproblems, optimal substructure.
+* memoization (top down): first look into lookup table, if not exist calculate value and put result in lookup table for later use. filled on demand.
+* tabulation (bottom up): builds table in bottom up fashion and returns last entry from table. filled one by one.
+* optimal substructure: optimal solution of given problem can be obtained by using optimal solutions of its subproblems.
+* running time complexity: O(n). 
 
 * memoization: store previous calculations in table, then retrieve needed one from table rather than calculating again. 
 * running time complexity: O(1).

@@ -134,6 +134,15 @@
 58-DivideConquer(NumberOfPaths)
 
 [OTHERS]
-Graph(FindSameContacts)
-Search(FindMinimumUnsorted)
+Bit(NextPowerOfTwo)
 Connectivity(EulerianPath)
+Dynamic(LargestSubarraySum)
+Dynamic(OptimalBinarySearchTree)
+Dynamic(SubsetSum)
+Dynamic(UglyNumbers)
+Graph(FindSameContacts)
+Math(BisectionMethod)
+Math(ChordMethod)
+Search(FindMinimumUnsorted)
+Sort(QuickSortDLL)
+Sort(QuickSortSLL)

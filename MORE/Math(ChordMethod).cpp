@@ -1,4 +1,4 @@
-//Math(MethodOfChords)
+//Math(ChordMethod)
 //Task: find root of continuous function in interval [a, b] where f(a)*f(b) < 0.
 //Reference: numerical analysis.
 //Worse case can be very slow.
