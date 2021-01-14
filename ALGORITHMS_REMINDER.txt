@@ -25,7 +25,9 @@
 * transpose symmetry: if f(n) is O(g(n)) then g(n) is O(f(n)). only valid for big-o and omega.
 * if f(n)=O(g(n)) and f(n)=o(g(n)) then f(n)=T(g(n)).
 * if f(n)=O(g(n)) and d(n)=O(e(n)) then f(n)+d(n)=O(max(g(n),e(n))).
-* if f(n)=O(g(n)) and d(n)=O(e(n)) then f(n)*d(n)=O(g(n)*e(n)). 
+* if f(n)=O(g(n)) and d(n)=O(e(n)) then f(n)*d(n)=O(g(n)*e(n)).
+* polynomial time algorithm: algorithm whose time complexity is only based on number of elements in array (not value).
+* pseudo-polynomial algorithm: algorithm whose worst case time complexity depends on numeric value of input (not number of inputs).
 
 [RECURSION]
 * recursive function: function calls itself until base case is reached.
