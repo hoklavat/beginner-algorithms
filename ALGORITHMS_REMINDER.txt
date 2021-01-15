@@ -352,7 +352,6 @@ elements. insert/remove by pos takes much time because of shifting.
 * memory complexity bad. lots of references. O(N).
 * first-in first out.
 * applications: dijsktra, machine learning, edmonds-karp maximum flow, cheyen garbage collection, reference detection, serialization/deserialization, web-crawler, 
-
 network topology, barabasi popular websites, ...
 
 [DEPTH FIRST SEARCH]

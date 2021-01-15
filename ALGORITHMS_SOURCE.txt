@@ -1,10 +1,10 @@
 *** ALGORITHMS AND DATA STRUCTURES ***
 
 [SOFTWARE]
-* Compiler: MinGW (http://www.mingw.org/)
-* Integrated Development Environment: CodeLite (https://codelite.org/)
+* Compiler: MinGW GNU C++ (http://www.mingw.org/)
+* IDE: CodeLite (https://codelite.org/)
 
-[ALGORITHMS]
+[FUNDAMENTAL ALGORITHMS]
 * Recursion
   - Factorial
   - Fibonacci
@@ -133,13 +133,20 @@
 57-DivideConquer(MinimumCost)
 58-DivideConquer(NumberOfPaths)
 
-[OTHERS]
+[OTHER ALGORITHMS]
+Backtracking(HamiltonianCycle)
 Bit(NextPowerOfTwo)
+Bit(OppositeSigns)
 Connectivity(EulerianPath)
+Dynamic(CountBinaryString)
+Dynamic(Fibonacci)
 Dynamic(LargestSubarraySum)
+Dynamic(MinimumCost)
+Dynamic(NumberOfWays)
 Dynamic(OptimalBinarySearchTree)
 Dynamic(SubsetSum)
 Dynamic(UglyNumbers)
+Graph(BreadthFirstTraversal)
 Graph(FindSameContacts)
 Math(BisectionMethod)
 Math(ChordMethod)
