@@ -1,5 +1,10 @@
 //41-Graph(BellmanFord)
-//Dynamic/Graph Shortest Path Algorithm
+//Task: find shortest paths from given vertice to all other vertices in given graph.
+//Reference: directed graph, shortest path, bellman ford, dynamic.
+//Time Complexity: O(VE).
+//may contain negative weight edges.
+//iterating through all edges one more time and getting shorter path for any vertex means that there is negative weight cycle.
+
 
 #include <iostream>
 #include <climits>
@@ -39,10 +44,10 @@ void BellmanFord(struct Graph* G, int s){
 	int D[V]; //distances.
 
 	for(int i = 0; i < V; i++)
-		D[i] = INT_MAX;
-	D[s] = 0;
+		D[i] = INT_MAX; //distance to others.
+	D[s] = 0; //distance to self.
 
-	for(int i = 1; i <= V - 1; i++){
+	for(int i = 1; i <= V-1; i++){ //V-1 edges from source vertice to others at most.
 		for(int j = 0; j < E; j++){
 			int u = G->edge[j].source;
 			int v = G->edge[j].destination;
@@ -51,7 +56,7 @@ void BellmanFord(struct Graph* G, int s){
 		}
 	}
 	
-	//check negative weights.
+	//check negative weight cycles.
 	for(int i = 0; i < E; i++){
 		int u = G->edge[i].source;
 		int v = G->edge[i].destination;
