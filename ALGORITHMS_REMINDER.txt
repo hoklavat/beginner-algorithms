@@ -338,6 +338,8 @@ elements. insert/remove by pos takes much time because of shifting.
 * adjacency matrix for undirected graph is symmetrical.
 * for directed graph (u, v) is not same as (v, u) where v and u are nodes.
 * mathematical structures to model pairwise relations between given objects.
+* directed graph is called strongly connected if there is path from each vertex in graph to every other vertex.
+* bipartite graph is graph whose vertices can be divided into two disjoint and independent sets U and V such that every edge connects vertex in U to one in V.
 * adjacency matrix
    - A(i, j) = 1 (nodes i, j are directly connected)
    - A(i, j) = 0 (nodes i, j are not directly connected)
@@ -362,6 +364,7 @@ network topology, barabasi popular websites, ...
 * explore as far as possible along each branch before backtracing.
 * furthest vertex before visiting neighbour.
 * applications: topological ordering, kosaraju strongly connected components algorithm, detecting cycles (DAG graph or not), generate/solve maze, ...
+* topological sorting is mainly used for scheduling jobs from given dependencies among jobs.
 
 [AVL TREE]
 * self-balancing binary search tree where the difference between heights of left and right subtrees cannot be more than one for all nodes.
