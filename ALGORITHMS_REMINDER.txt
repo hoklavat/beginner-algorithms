@@ -491,3 +491,10 @@ value is greater than 0.
 * two dimensional matrix is given. accessing each cell have cost associated with it. started from (0, 0) go till (n-1, n-1) cell.
 * only movement to right or down cell from current cell is possible.
 * find number of ways to reach end, by not exceeding total cost limit.
+
+[MAXIMUM FLOW PROBLEM]
+* maximum flow problems involve finding feasible flow through single-source, single-sink flow network that is maximum.
+* figure out how much stuff can be pushed from source vertex to sink vertex.
+* each edge has capacity. flow should not exceed this capacity for single path. f(e) < c(e). so maximum flow for single path is least capacity among all edges on this path.
+* over all maximum flow is found by summing individual flows of paths.
+* residual graph of flow network is graph which indicates additional possible flow. if there is path from source to sink in residual graph, then it is possible to add flow.
