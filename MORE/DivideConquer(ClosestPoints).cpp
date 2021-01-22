@@ -1,6 +1,6 @@
 //DivideConquer(ClosestPoints)
 //Task: given array of n points in plane, find closest pair of points in array.
-//Reference: divide and conquer, analytical geometry.
+//Reference: divide and conquer, recursion, analytical geometry.
 //Time Complexity: O(n*(Logn)^2).
 
 #include <iostream>
@@ -44,10 +44,10 @@ float minimum(float x, float y){
 
 float stripClosest(Point strip[], int size, float d){
 	float min = d;
-	qsort(strip, size, sizeof(Point), compareY);
+	qsort(strip, size, sizeof(Point), compareY); //sort strip according to y in ascending order.
 
 	for(int i = 0; i < size; ++i)
-		for(int j = i+1; j < size && (strip[j].y - strip[i].y) < min; ++j)
+		for(int j = i+1; j < size && (strip[j].y-strip[i].y) < min; ++j)
 			if(distance(strip[i],strip[j]) < min)
 				min = distance(strip[i], strip[j]);
 				
@@ -74,7 +74,7 @@ float closestUtil(Point P[], int n){
 }
 
 float closest(Point P[], int n){
-	qsort(P, n, sizeof(Point), compareX); //array is sorted according to x cooordinates in ascending order.
+	qsort(P, n, sizeof(Point), compareX); //sort points array according to x cooordinates in ascending order.
 	return closestUtil(P, n);
 }
 
