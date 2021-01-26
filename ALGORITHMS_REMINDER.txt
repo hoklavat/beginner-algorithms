@@ -498,3 +498,6 @@ value is greater than 0.
 * each edge has capacity. flow should not exceed this capacity for single path. f(e) < c(e). so maximum flow for single path is least capacity among all edges on this path.
 * over all maximum flow is found by summing individual flows of paths.
 * residual graph of flow network is graph which indicates additional possible flow. if there is path from source to sink in residual graph, then it is possible to add flow.
+
+[BRANCH AND BOUND]
+* generally used for solving combinatorial optimization problems.
