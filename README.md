@@ -1,9 +1,9 @@
 # ALGORITHMS AND DATA STRUCTURES 
-------------
+
 ## [SOFTWARE]
 * **COMPILER:** MinGW GNU C++ (http://www.mingw.org/)
 * **IDE:** CodeLite (https://codelite.org/)
-------------
+
 ## [FUNDAMENTAL ALGORITHMS]
 * Recursion
   - Factorial
@@ -52,7 +52,7 @@
   - Longest Palindromic Substring
   - Minimun Cost to Reach End
   - Number of Paths to Reach End
-------------
+
 ## [INDEPENDENT DATA STRUCTURES]
 * Array
   - One Dimensional
@@ -62,7 +62,7 @@
   - Single Circular
   - Double
   - Double Circular
-------------
+
 ## [DEPENDENT DATA STRUCTURES]
 * Stack
 * Queue
@@ -72,7 +72,7 @@
 * Graph
 * AVL Tree
 * Trie
-------------
+
 ## [SOURCE CODES]
 - 01-Recursion(HeadTail)
 - 02-Recursion(Sum)
@@ -132,7 +132,7 @@
 - 56-DivideConquer(LongestPalindromicSubstring)
 - 57-DivideConquer(MinimumCost)
 - 58-DivideConquer(NumberOfPaths)
-------------
+
 ## [OTHER ALGORITHMS]
 - Backtracking(HamiltonianCycle)
 - Bit(NextPowerOfTwo)
