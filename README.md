@@ -1,11 +1,10 @@
 # ALGORITHMS AND DATA STRUCTURES 
 ------------
-
-#### [SOFTWARE]
-* **COMPILER: **MinGW GNU C++ (http://www.mingw.org/)
-* **IDE: **CodeLite (https://codelite.org/)
+## [SOFTWARE]
+* **COMPILER:** MinGW GNU C++ (http://www.mingw.org/)
+* **IDE:** CodeLite (https://codelite.org/)
 ------------
-#### [FUNDAMENTAL ALGORITHMS]
+## [FUNDAMENTAL ALGORITHMS]
 * Recursion
   - Factorial
   - Fibonacci
@@ -54,7 +53,7 @@
   - Minimun Cost to Reach End
   - Number of Paths to Reach End
 ------------
-#### [INDEPENDENT DATA STRUCTURES]
+## [INDEPENDENT DATA STRUCTURES]
 * Array
   - One Dimensional
   - Two Dimensional
@@ -64,7 +63,7 @@
   - Double
   - Double Circular
 ------------
-#### [DEPENDENT DATA STRUCTURES]
+## [DEPENDENT DATA STRUCTURES]
 * Stack
 * Queue
 * Tree
@@ -74,7 +73,7 @@
 * AVL Tree
 * Trie
 ------------
-#### [SOURCE CODES]
+## [SOURCE CODES]
 - 01-Recursion(HeadTail)
 - 02-Recursion(Sum)
 - 03-Recursion(Factorial)
@@ -134,7 +133,7 @@
 - 57-DivideConquer(MinimumCost)
 - 58-DivideConquer(NumberOfPaths)
 ------------
-### [OTHER ALGORITHMS]
+## [OTHER ALGORITHMS]
 - Backtracking(HamiltonianCycle)
 - Bit(NextPowerOfTwo)
 - Bit(OppositeSigns)
