@@ -1,10 +1,11 @@
-*** ALGORITHMS AND DATA STRUCTURES ***
+# ALGORITHMS AND DATA STRUCTURES 
+------------
 
-[SOFTWARE]
-* Compiler: MinGW GNU C++ (http://www.mingw.org/)
-* IDE: CodeLite (https://codelite.org/)
+### [SOFTWARE]
+* **COMPILER: **MinGW GNU C++ (http://www.mingw.org/)
+* **IDE: **CodeLite (https://codelite.org/)
 
-[FUNDAMENTAL ALGORITHMS]
+### [FUNDAMENTAL ALGORITHMS]
 * Recursion
   - Factorial
   - Fibonacci
@@ -53,7 +54,7 @@
   - Minimun Cost to Reach End
   - Number of Paths to Reach End
 
-[INDEPENDENT DATA STRUCTURES]
+### [INDEPENDENT DATA STRUCTURES]
 * Array
   - One Dimensional
   - Two Dimensional
@@ -63,7 +64,7 @@
   - Double
   - Double Circular
 
-[DEPENDENT DATA STRUCTURES]
+### [DEPENDENT DATA STRUCTURES]
 * Stack
 * Queue
 * Tree
@@ -73,7 +74,7 @@
 * AVL Tree
 * Trie
 
-[SOURCE LIST]
+### [SOURCE CODES]
 01-Recursion(HeadTail)
 02-Recursion(Sum)
 03-Recursion(Factorial)
@@ -133,34 +134,34 @@
 57-DivideConquer(MinimumCost)
 58-DivideConquer(NumberOfPaths)
 
-[OTHER ALGORITHMS]
-Backtracking(HamiltonianCycle)
-Bit(NextPowerOfTwo)
-Bit(OppositeSigns)
-Bit(TurnOff)
-BranchBound(01KnapsackProblem)
-Connectivity(EulerianPath)
-DivideConquer(ClosestPoints)
-Dynamic(CountBinaryString)
-Dynamic(Fibonacci)
-Dynamic(LargestSubarraySum)
-Dynamic(MinimumCost)
-Dynamic(NondecreasingNumbers)
-Dynamic(NumberOfWays)
-Dynamic(OptimalBinarySearchTree)
-Dynamic(SubsetSum)
-Dynamic(UglyNumbers)
-Graph(BreadthFirstTraversal)
-Graph(DepthFirstTraversal)
-Graph(FindSameContacts)
-Greedy(HuffmanCoding)
-Math(BisectionMethod)
-Math(CatalanNumbers)
-Math(ChordMethod)
-Math(Power)
-Math(Probability)
-MaximumFlow(Ford-Fulkerson)
-Search(ClosestSum)
-Search(FindMinimumUnsorted)
-Sort(QuickSortDLL)
-Sort(QuickSortSLL)
+### [OTHER ALGORITHMS]
+- Backtracking(HamiltonianCycle)
+- Bit(NextPowerOfTwo)
+- Bit(OppositeSigns)
+- Bit(TurnOff)
+- BranchBound(01KnapsackProblem)
+- Connectivity(EulerianPath)
+- DivideConquer(ClosestPoints)
+- Dynamic(CountBinaryString)
+- Dynamic(Fibonacci)
+- Dynamic(LargestSubarraySum)
+- Dynamic(MinimumCost)
+- Dynamic(NondecreasingNumbers)
+- Dynamic(NumberOfWays)
+- Dynamic(OptimalBinarySearchTree)
+- Dynamic(SubsetSum)
+- Dynamic(UglyNumbers)
+- Graph(BreadthFirstTraversal)
+- Graph(DepthFirstTraversal)
+- Graph(FindSameContacts)
+- Greedy(HuffmanCoding)
+- Math(BisectionMethod)
+- Math(CatalanNumbers)
+- Math(ChordMethod)
+- Math(Power)
+- Math(Probability)
+- MaximumFlow(Ford-Fulkerson)
+- Search(ClosestSum)
+- Search(FindMinimumUnsorted)
+- Sort(QuickSortDLL)
+- Sort(QuickSortSLL)
