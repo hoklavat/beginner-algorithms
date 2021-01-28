@@ -1,8 +1,8 @@
 # ALGORITHMS AND DATA STRUCTURES 
 
 ## [SOFTWARE]
-* **COMPILER:** MinGW GNU C++ (http://www.mingw.org/)
-* **IDE:** CodeLite (https://codelite.org/)
+* **COMPILER:** MinGW GNU C++ 
+* **IDE:** CodeLite 
 
 ## [FUNDAMENTAL ALGORITHMS]
 * Recursion
@@ -50,7 +50,7 @@
   - Longest Common Subsequence
   - Longest Palindromic Subsequence
   - Longest Palindromic Substring
-  - Minimun Cost to Reach End
+  - Minimum Cost to Reach End
   - Number of Paths to Reach End
 
 ## [INDEPENDENT DATA STRUCTURES]

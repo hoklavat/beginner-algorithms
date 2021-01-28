@@ -50,7 +50,7 @@
   - Longest Common Subsequence
   - Longest Palindromic Subsequence
   - Longest Palindromic Substring
-  - Minimun Cost to Reach End
+  - Minimum Cost to Reach End
   - Number of Paths to Reach End
 
 [INDEPENDENT DATA STRUCTURES]
